@@ -209,6 +209,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LevelMstController.cs" />
     <Compile Include="Controllers\ModuleMstController.cs" />
+    <Compile Include="Controllers\PlanDetailsController.cs" />
+    <Compile Include="Controllers\PlanExamDetailsController.cs" />
     <Compile Include="Controllers\PlanTypeMstController.cs" />
     <Compile Include="Controllers\QuestionAviFilesController.cs" />
     <Compile Include="Controllers\QuestionCategaryMstController.cs" />
@@ -236,6 +238,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Level_Mst.cs" />
     <Compile Include="Models\Module_Mst.cs" />
+    <Compile Include="Models\Multiple_Choice_Question.cs" />
+    <Compile Include="Models\Plan_Exam_Details.cs" />
     <Compile Include="Models\Plan_Mst.cs" />
     <Compile Include="Models\Plan_Type_Mst.cs" />
     <Compile Include="Models\Question_Avi_Files.cs" />
