@@ -11,9 +11,13 @@ namespace PTEWebService.Models
     public class Plan_Details
     {
         public int index_id { get; set; }
-        public string plan_name { get; set; }
-        public int plan_type_id { get; set; }
+        public int plan_id { get; set; }
+        public int value { get; set; }
+        public float price { get; set; }
+        public string notes { get; set; }
         public int user_id { get; set; }
+
+        
 
         private SqlConnection con;
         private SqlCommand com;
@@ -23,8 +27,8 @@ namespace PTEWebService.Models
             string constr = ConfigurationManager.ConnectionStrings["getconn"].ToString();
             con = new SqlConnection(constr);
         }
-        #region Get All Plan
-        public string GetAllPlan()
+        #region Get All Plan Details
+        public string GetAllPlanDetails()
         {
             try
             {
@@ -57,8 +61,8 @@ namespace PTEWebService.Models
             }
         }
         #endregion
-        #region Get Plan from Index ID
-        public string GetPlan(int id)
+        #region Get Plan Details from Index ID
+        public string GetPlanDetails(int id)
         {
             try
             {
@@ -92,14 +96,14 @@ namespace PTEWebService.Models
             }
         }
         #endregion
-        #region Insert Plan
-        public string AddPlan(string plan_name, int plan_type_id, int user_id)
+        #region Insert Plan Details
+        public string AddPlanDetails(int plan_id, int value, float price, string notes, int user_id)
         {
             connection();
             com = new SqlCommand("prManageModules", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@Action", "Insert");
-            com.Parameters.AddWithValue("@module_name", plan_name);
+            com.Parameters.AddWithValue("@module_name", notes);
             com.Parameters.AddWithValue("@created_by", user_id);
             com.Parameters.AddWithValue("@is_deleted", false);
             con.Open();
@@ -116,15 +120,15 @@ namespace PTEWebService.Models
             }
         }
         #endregion
-        #region Update Plan
-        public string EditPlan(int index_id, string plan_name, int plan_type_id, int user_id)
+        #region Update Plan Details
+        public string EditPlanDetails(int index_id,int plan_id, int value, float price, string notes, int user_id)
         {
             connection();
             com = new SqlCommand("prManageModules", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@Action", "Update");
             com.Parameters.AddWithValue("@index_id", index_id);
-            com.Parameters.AddWithValue("@module_name", plan_name);
+            com.Parameters.AddWithValue("@module_name", notes);
             com.Parameters.AddWithValue("@updated_date", DateTime.Now.ToShortDateString());
             com.Parameters.AddWithValue("@updated_by", "UserId");
             con.Open();
@@ -140,8 +144,8 @@ namespace PTEWebService.Models
             }
         }
         #endregion
-        #region Delete Plan
-        public string DeletePlan(int index_id)
+        #region Delete Plan Details
+        public string DeletePlanDetails(int index_id)
         {
             connection();
             com = new SqlCommand("prManageModules", con);
