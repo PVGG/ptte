@@ -210,6 +210,7 @@
     <Compile Include="Controllers\QuestionCategaryMstController.cs" />
     <Compile Include="Controllers\QuestionMstController.cs" />
     <Compile Include="Controllers\StateMstController.cs" />
+    <Compile Include="Controllers\UserAnswerController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\ZoneMstController.cs" />
     <Compile Include="Global.asax.cs">
@@ -230,6 +231,7 @@
     <Compile Include="Models\Question_Category_Mst.cs" />
     <Compile Include="Models\Question_Mst.cs" />
     <Compile Include="Models\State_Mst.cs" />
+    <Compile Include="Models\User_Answer.cs" />
     <Compile Include="Models\Zone_Mst.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
