@@ -202,12 +202,14 @@
     <Compile Include="Controllers\AreaMstController.cs" />
     <Compile Include="Controllers\CityMstController.cs" />
     <Compile Include="Controllers\CountryMstController.cs" />
+    <Compile Include="Controllers\CustomerMstController.cs" />
     <Compile Include="Controllers\ExamCategaryMstController.cs" />
     <Compile Include="Controllers\ExamMstController.cs" />
     <Compile Include="Controllers\ExamQuestionMstController.cs" />
     <Compile Include="Controllers\ExamTypeMstController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LevelMstController.cs" />
+    <Compile Include="Controllers\LogDetailsController.cs" />
     <Compile Include="Controllers\ModuleMstController.cs" />
     <Compile Include="Controllers\MultipleChoiceQuestionController.cs" />
     <Compile Include="Controllers\PlanDetailsController.cs" />
@@ -220,6 +222,7 @@
     <Compile Include="Controllers\StateMstController.cs" />
     <Compile Include="Controllers\SubscriptionMstController.cs" />
     <Compile Include="Controllers\SubscriptionPlanMstController.cs" />
+    <Compile Include="Controllers\SystemPagesMstController.cs" />
     <Compile Include="Controllers\UserAnswerController.cs" />
     <Compile Include="Controllers\UserAnswerRecordFileController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
@@ -233,12 +236,14 @@
     <Compile Include="Models\Area_Mst.cs" />
     <Compile Include="Models\City_Mst.cs" />
     <Compile Include="Models\Country_Mst.cs" />
+    <Compile Include="Models\Customer_Mst.cs" />
     <Compile Include="Models\Exam_Category_Mst.cs" />
     <Compile Include="Models\Exam_Mst.cs" />
     <Compile Include="Models\Exam_Question_Mst.cs" />
     <Compile Include="Models\Exam_Type_Mst.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Level_Mst.cs" />
+    <Compile Include="Models\Log_Details.cs" />
     <Compile Include="Models\Module_Mst.cs" />
     <Compile Include="Models\Multiple_Choice_Question.cs" />
     <Compile Include="Models\Plan_Exam_Details.cs" />
@@ -251,6 +256,7 @@
     <Compile Include="Models\State_Mst.cs" />
     <Compile Include="Models\Subscription_Mst.cs" />
     <Compile Include="Models\Subscription_Plan_Mst.cs" />
+    <Compile Include="Models\System_Pages_Mst.cs" />
     <Compile Include="Models\User_Answer.cs" />
     <Compile Include="Models\User_Answer_Record_File.cs" />
     <Compile Include="Models\User_Info.cs" />
