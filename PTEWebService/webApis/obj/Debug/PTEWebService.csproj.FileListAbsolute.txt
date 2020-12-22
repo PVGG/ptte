@@ -60,3 +60,7 @@ C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csproj.CoreC
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.pdb
+E:\PTTCODE\ptte\PTEWebService\webApis\obj\Debug\PTEWebService.csprojAssemblyReference.cache
+E:\PTTCODE\ptte\PTEWebService\webApis\obj\Debug\PTEWebService.csproj.CoreCompileInputs.cache
+E:\PTTCODE\ptte\PTEWebService\webApis\obj\Debug\webApis.dll
+E:\PTTCODE\ptte\PTEWebService\webApis\obj\Debug\webApis.pdb
