@@ -200,7 +200,9 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaMstController.cs" />
+    <Compile Include="Controllers\AssignPagesToUserController.cs" />
     <Compile Include="Controllers\CityMstController.cs" />
+    <Compile Include="Controllers\CompanyInfoController.cs" />
     <Compile Include="Controllers\CountryMstController.cs" />
     <Compile Include="Controllers\CustomerMstController.cs" />
     <Compile Include="Controllers\ExamCategaryMstController.cs" />
@@ -234,6 +236,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Mst.cs" />
+    <Compile Include="Models\Assign_Pages_To_User.cs" />
     <Compile Include="Models\City_Mst.cs" />
     <Compile Include="Models\Company_Info.cs" />
     <Compile Include="Models\Country_Mst.cs" />
