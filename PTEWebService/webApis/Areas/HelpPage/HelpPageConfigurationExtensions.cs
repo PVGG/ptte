@@ -8,9 +8,6 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Web.Http;
-using System.Web.Http.Controllers;
-using System.Web.Http.Description;
 using webApis.Areas.HelpPage.ModelDescriptions;
 using webApis.Areas.HelpPage.Models;
 
