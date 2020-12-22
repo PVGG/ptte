@@ -235,6 +235,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Area_Mst.cs" />
     <Compile Include="Models\City_Mst.cs" />
+    <Compile Include="Models\Company_Info.cs" />
     <Compile Include="Models\Country_Mst.cs" />
     <Compile Include="Models\Customer_Mst.cs" />
     <Compile Include="Models\Exam_Category_Mst.cs" />
