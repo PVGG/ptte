@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/CustomScripts/jsQuestionCategaryMst.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+        <select id="cmboModuleList"></select>
+        <input type="text" id="txtCategaryId" />
+        <input type="text" id="txtCategaryName" />
+        <textarea id="txtNotes"></textarea>
+        <textarea id="txtInstructions"></textarea>
+        <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)"/>
+        <input type="hidden" id="base64" />
+        <input type="button" id="btnSave" value="SAVE" />
+        <input type="button" id="btnUpdate" value="UPDATE" />
+        <div id="lstQuestionCategaryList"></div>
+    </div>
+</body>
+</html>
