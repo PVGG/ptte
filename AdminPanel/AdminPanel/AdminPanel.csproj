@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Area_Mst.html" />
+    <Content Include="City_Mst.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -113,11 +115,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Country_Mst.html" />
+    <Content Include="CustomScripts\jsAreaMst.js" />
+    <Content Include="CustomScripts\jsCityMst.js" />
     <Content Include="CustomScripts\jsCountryMst.js" />
     <Content Include="CustomScripts\jsModuleMst.js" />
+    <Content Include="CustomScripts\jsPlanMst.js" />
+    <Content Include="CustomScripts\jsPlan_Details_Mst.js" />
     <Content Include="CustomScripts\jsQuestionCategaryMst.js" />
+    <Content Include="CustomScripts\jsRoleMst.js" />
     <Content Include="CustomScripts\jsStateMst.js" />
     <Content Include="CustomScripts\jsZoneMst.js" />
+    <Content Include="CustomScripts\jsPlan_Type_Mst.js" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -130,6 +138,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Plan_Details_Mst.html" />
+    <Content Include="Plan_Mst.html" />
+    <Content Include="Plan_Type_Mst.html" />
+    <Content Include="Role_Mst.html" />
     <Content Include="State_Mst.html" />
     <Content Include="Zone_Mst.html" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
