@@ -29,7 +29,7 @@ namespace PTEWebService.Models
             try
             {
                 connection();
-                com = new SqlCommand("prManageModules", con);
+                com = new SqlCommand("prManageZone_mst", con);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@Action", "SelectAll");
                 com.Parameters.AddWithValue("@is_deleted", false);
@@ -92,7 +92,7 @@ namespace PTEWebService.Models
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@Action", "Insert");
             com.Parameters.AddWithValue("@country_id", country_id); 
-            com.Parameters.AddWithValue("@module_name", zone_name);
+            com.Parameters.AddWithValue("@zone_name", zone_name);
             com.Parameters.AddWithValue("@created_by", user_id);
             com.Parameters.AddWithValue("@is_deleted", false);
             con.Open();
@@ -118,7 +118,7 @@ namespace PTEWebService.Models
             com.Parameters.AddWithValue("@Action", "Update");
             com.Parameters.AddWithValue("@index_id", index_id);
             com.Parameters.AddWithValue("@country_id", country_id);
-            com.Parameters.AddWithValue("@module_name", zone_name);
+            com.Parameters.AddWithValue("@zone_name", zone_name);
             com.Parameters.AddWithValue("@updated_date", DateTime.Now.ToShortDateString());
             com.Parameters.AddWithValue("@updated_by", user_id);
             con.Open();

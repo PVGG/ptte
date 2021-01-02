@@ -87,6 +87,27 @@ namespace PTEWebService.Models
             }
         }
         #endregion
+
+        #region Get Question Categary from Index ID
+        public string GetQuestionCategaryByModuleId(int id)
+        {
+            try
+            {
+                CommonFunction obj = new CommonFunction();
+                DataTable dt = new DataTable();
+                dt = obj.getListById("Select", "question_category_mst", "index_id,question_category_name", "is_deleted=0 AND module_id", id.ToString());
+                string json_data = obj.DataTableToJSONWithStringBuilder(dt);
+                return json_data;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+                return null;
+            }
+           
+        }
+        #endregion
+
         #region Insert Question Categary
         public string AddQuestionCategary(int module_id, string question_category_name, string av_url, string notes, string instructions, int user_id)
         {

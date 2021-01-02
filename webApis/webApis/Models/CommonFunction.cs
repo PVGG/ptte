@@ -112,6 +112,40 @@ namespace PTEWebService.Models
 
         }
 
+        public DataTable getListById(string action, string table_name, string field_name, string where_field, string where_value)
+        {
+            string constr = ConfigurationManager.ConnectionStrings["getconn"].ToString();
+            SqlConnection con = new SqlConnection(constr);
+            try
+            {
+                SqlCommand com = new SqlCommand("prGetValuebyId", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Action", action);
+                com.Parameters.AddWithValue("@TableName", table_name);
+                com.Parameters.AddWithValue("@FieldName", field_name);
+                com.Parameters.AddWithValue("@WhereField", where_field);
+                com.Parameters.AddWithValue("@whereValue", where_value);
+                con.Open();
+                SqlDataAdapter ada = new SqlDataAdapter(com);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+                con.Close();
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+
 
     }
 }

@@ -26,6 +26,17 @@ namespace PTEWebService.Controllers
 
         }
 
+        // GET: api/questioncategarymst/5/0
+        public string Get(int id,int flage)
+        {
+            Models.Question_Category_Mst obj = new Models.Question_Category_Mst();
+
+            string output = obj.GetQuestionCategaryByModuleId(id);
+
+            return output;
+
+        }
+
         // GET: api/questioncategarymst
         public string Get()
         {
@@ -61,7 +72,7 @@ namespace PTEWebService.Controllers
                     string content_data = baseData.Split(',')[0];
                     string content_type_info = content_data.Split(';')[0];
                     string content_type = content_type_info.Split('/')[1];
-                    if (content_type.Equals("x-msvideo"))
+                    if (content_type.Equals("avi"))
                     {
                         filePath = file_name + "." + "avi";
                     }
@@ -133,7 +144,7 @@ namespace PTEWebService.Controllers
                     string content_data = baseData.Split(',')[0];
                     string content_type_info = content_data.Split(';')[0];
                     string content_type = content_type_info.Split('/')[1];
-                    if (content_type.Equals("x-msvideo"))
+                    if (content_type.Equals("avi"))
                     {
                         string file_name = av_url_file_name.Split('.')[0];
                         filePath = file_name + "." + "avi";
