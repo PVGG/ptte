@@ -8,14 +8,33 @@
 </head>
 <body>
     <div>
+       
         <input type="text" id="txtPlanId" /><br /><br />
-        Plan Type Name
+        Plan Type
         <select id="cmboPlan_Type_List"></select>
-        <br />
         Plan Name
         <input type="text" id="txtPlanName" /><br /><br />
-        <input type="button" id="btnSave" value="SAVE" />
-        <input type="button" id="btnUpdate" value="UPDATE" />
+        Value
+        <input type="text" id="value" />
+        Price
+        <input type="text" id="price" />
+        Notes
+        <input type="text" id="notes" />
+        <input type="button" id="btnAdd" value="Add" /><br /><br />
+        <input type="button" id="btnSubmit" value="SUBMIT" />
+        <input type="button" id="btnCancel" value="CANCEL" />
+        <table>
+            <tr>
+                <td>Value</td>
+                <td>Price</td>
+                <td>Notes</td>
+            </tr>
+            <tbody id="tblData">
+
+
+            </tbody>
+        </table>
+
         <div id="lstPlan_List"></div>
     </div>
 </body>

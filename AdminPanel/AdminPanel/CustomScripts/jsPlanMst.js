@@ -1,9 +1,10 @@
-﻿$(document).ready(function () {
+﻿var jsonFormatedData = "";
+$(document).ready(function () {
     //alert("Hello");
     plan_type_list();
-    plan_list();
+   // plan_list();
 
-    $("#btnSave").click(function () {
+    $("#btnSubmit").click(function () {
         var requestData = '[{"plan_type_id":"' + $("#cmboPlan_Type_List").val() + '","plan_name":"' + $("#txtPlanName").val() + '","user_id":"11"}]';
         $.ajax({
             type: "POST",
@@ -13,9 +14,56 @@
             //datatype: "json",
             success: function (responseFromServer) {
                 alert(responseFromServer);
-                plan_list();
+                $("#txtPlanId").val(responseFromServer);
+                jsonFormatedData = "";
+                $('#tblData tr').each(function () {
+                    var value = $(this).find("td").eq(0).html();
+                    var price = $(this).find("td").eq(1).html();
+                    var notes = $(this).find("td").eq(2).html();
+
+                    var requestData = '{"plan_id":"' + $("#txtPlanId").val() + '","value":"' + value + '","price":"' + price + '","notes":"' + notes + '","user_id":"11"}';
+                    if (jsonFormatedData == "") {
+                        jsonFormatedData += requestData;
+                    }
+                    else {
+                        jsonFormatedData += "," + requestData;
+                    }
+
+
+                    //alert(value + "/" + price + "/" + notes);
+                });
+
+
+                jsonFormatedData = "[" + jsonFormatedData + "]";
+                alert(jsonFormatedData);
+
+                if (true) {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://trial.spyderxindia.com/api/plandetails",
+                        data: JSON.stringify(jsonFormatedData),
+                        contentType: "application/json",
+                        //datatype: "json",
+                        success: function (responseFromServer) {
+                            alert(responseFromServer);
+                            // plan_details_list();
+                        }
+                    });
+                }
+
+                //plan_list();
             }
         });
+    });
+
+
+
+    $("#btnCancel").click(function () {
+        $("#txtPlanName").val("");
+        $("#value").val("");
+        $("#price").val("");
+        $("#notes").val("");
+        $("#tblData").html("");
     });
 
 
@@ -36,6 +84,32 @@
             }
         });
     });
+
+
+    $("#btnAdd").click(function () {
+        var tbl = "";
+        tbl += "<tr>";
+        tbl += "<td>";
+        tbl += $("#value").val();
+        tbl += "</td>";
+        tbl += "<td>";
+        tbl += $("#price").val();
+        tbl += "</td>";
+        tbl += "<td>";
+        tbl += $("#notes").val();
+        tbl += "</td>";
+        tbl += "</tr>";
+        $("#tblData").append(tbl);
+        
+        //alert(jsonFormatedData);
+
+
+       
+
+        
+    });
+
+
 
 
 
