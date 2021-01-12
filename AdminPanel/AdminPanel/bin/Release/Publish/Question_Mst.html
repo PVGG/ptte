@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTTE</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">COMPANY NAME</a>
+            </div>
+
+            <div class="header-right">
+
+                <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
+                <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <!--<li>
+        <div class="user-img-div">
+            <img src="assets/img/user.png" class="img-thumbnail" />
+
+            <div class="inner-text">
+                Jhon Deo Alex
+                <br />
+                <small>Last Login : 2 Weeks Ago </small>
+            </div>
+        </div>
+
+    </li>-->
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-dashboard "></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Masters <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Country_Mst.html"><i class="fa fa-edit"></i>Country Master</a>
+                            </li>
+                            <li>
+                                <a href="Zone_Mst.html"><i class="fa fa-edit "></i>Zone Master</a>
+                            </li>
+                            <li>
+                                <a href="State_Mst.html"><i class="fa fa-edit "></i>State Master</a>
+                            </li>
+                            <li>
+                                <a href="City_Mst.html"><i class="fa fa-edit "></i>City Master</a>
+                            </li>
+                            <li>
+                                <a href="Area_Mst.html"><i class="fa fa-edit "></i>Area Master</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Plan Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Plan_Mst.html"><i class="fa fa-coffee"></i>Plan Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Plan_Type_Mst.html"><i class="fa fa-flash "></i>Plan Types</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Question Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Question_Mst.html"><i class="fa fa-coffee"></i>Question Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Question_Categary_Mst.html"><i class="fa fa-flash "></i>Question Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Exam Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Exam_Mst.html"><i class="fa fa-coffee"></i>Exam Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Type_Mst.html"><i class="fa fa-flash "></i>Exam Type Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Category_Mst.html"><i class="fa fa-flash "></i>Exam Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--<li>
+        <a href="ta.html"><i class="fa fa-flash "></i>User Info </a>
+    </li>-->
+
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Subscription </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-code "></i>Subscription Plan</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-sign-in "></i>Login Page</a>
+                    </li>
+                    <!--<li>
+        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
+            </li>
+            <li>
+                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                    <li>
+                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
+                    </li>
+
+                </ul>
+
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+    </li>-->
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <!--<div class="row">
+                        <div class="col-md-12">
+                            <h1 class="page-head-line">Basic Forms</h1>
+                        </div>
+                    </div>-->
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                        <div class="panel panel-info">
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            Question Master
+                                        </div>
+
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label> Id </label>
+                                                <input class="form-control" type="text" id="txtQuestionId">
+                                                <p class="help-block">Help text here.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label> Module Id </label>
+                                                    <select class="form-control" id="cmboModuleList"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label> Question Category Id </label>
+                                                    <select class="form-control" id="cmboQuestionCategaryList"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label> Customer Id </label>
+                                                    <select class="form-control" id="cmboCustomerList"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label> Level Id </label>
+                                                    <select class="form-control" id="cmboLevelList"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> AVI File URL </label>
+                                                <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)" />
+                                            </div>
+
+                                            <div class="form-group  col-md-6">
+                                                <label>  Record Begin Time </label>
+                                                <input class="form-control" type="text" id="txtRecordBeginTime">
+                                            </div>
+
+                                            <div class="form-group  col-md-6">
+                                                <label>  Recording Time </label>
+                                                <input class="form-control" type="text" id="txtRecordingTime">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>  Wait Time </label>
+                                                <input class="form-control" type="text" id="txtWaitTime">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>  Excerpt </label>
+                                                <input class="form-control" type="date" id="txtExcerpt">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Instruction </label>
+                                                <textarea class="form-control" type="text" id="txtInstruction" rows="3"></textarea>
+                                                <p class="help-block">Help text here.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Description </label>
+                                                <textarea class="form-control" type="text" id="txtDescription" rows="3"></textarea>
+                                                <p class="help-block">Help text here.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Question </label>
+                                                <input class="form-control" type="text" id="txtQuestion">
+                                                <p class="help-block">Help text here.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>  Answer </label>
+                                                <input class="form-control" type="text" id="txtAnswer">
+                                                <p class="help-block">Help text here.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-info" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
+
+
+                                    <div id="lstQuestionList"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /. WRAPPER  -->
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="footer-sec">
+        &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
+    </div>-->
+    <!-- /. FOOTER  -->
+    <!-- JQUERY SCRIPTS -->
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <!--<script src="js/jquery-1.10.2.js"></script>-->
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="js/custom.js"></script>
+    <!--api scripts-->
+    <script src="/CustomScripts/jsQuestionMst.js"></script>
+
+</body>
+</html>
