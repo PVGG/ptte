@@ -63,39 +63,41 @@ function question_list() {
             var jsonData = eval('(' + responseFromServer + ')');
             //alert(jsonData[0].index_id);
             var tbl = "<table width='100%' border='1px'>";
+            tbl += "<tr><th>Sr No</th><th>Record Begin Time</th><th>Recording Time</th><th>Wait Time</th><th>Excerpt</th><th align='center'>Instuctions</th><th>Description</th><th align='center'>Question</th><th>Answer</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
-                tbl += "<tr>";
-                tbl += "<td width='3%'>";
+                tbl += "";
+                tbl += "<tr>";                
+                tbl += "<td valign='top'>";
                 tbl += iCount + 1;
                 tbl += "</td>";
-                tbl += "<td width='4%'>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].record_begin_time;
                 tbl += "</td>";
-                tbl += "<td width='4%'>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].recording_time;
                 tbl += "</td>";
-                tbl += "<td width='3%'>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].wait_time;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].excerpt;
                 tbl += "</td>";
-                tbl += "<td width='26%'>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].instruction;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].description;
                 tbl += "</td>";
-                tbl += "<td width='50%'>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].question;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td valign='top'>";
                 tbl += jsonData[iCount].answer;
                 tbl += "</td>";
-                tbl += "<td width='5%'>";
+                tbl += "<td valign='top' align='center'>";
                 tbl += "<i type='button' class='fa fa-trash btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
-                tbl += "<td width='5%'>";
+                tbl += "<td valign='top' align='center'>";
                 tbl += "<i type='button' class='fa fa-edit btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "</tr>";
@@ -228,7 +230,11 @@ function update(id) {
                 $("#txtRecordBeginTime").val(jsonData[0].record_begin_time);
                 $("#txtRecordingTime").val(jsonData[0].recording_time);
                 $("#txtWaitTime").val(jsonData[0].wait_time);
-
+                $("#txtExcerpt").val(jsonData[0].excerpt);
+                $("#txtInstruction").val(jsonData[0].instruction);
+                $("#txtDescription").val(jsonData[0].description);
+                $("#txtQuestion").val(jsonData[0].question);
+                $("#txtAnswer").val(jsonData[0].answer);
 
             }
             question_list();

@@ -107,7 +107,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Area_Mst.html" />
-    <Content Include="Assign_Page_To_User.html" />
     <Content Include="City_Mst.html" />
     <Content Include="Company_Info_Mst.html" />
     <Content Include="Contact.aspx" />

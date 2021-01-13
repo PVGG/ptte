@@ -2,59 +2,319 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <script src="/Scripts/jquery-3.3.1.min.js"></script>
-    <script src="/CustomScripts/jsCompanyInfo.js"></script>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTTE</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
-    <div>
-        <input type="text" id="txtCompanyId" /><br />
-        Company Name
-        <input type="text" id="txtCompany_Name" /><br />
-        Company Address
-        <input type="text" id="txtCompany_Address" /><br />
-        Company Pincode
-        <input type="text" id="txtCustomer_Pincode" /><br />
-        Company Country Id
-        <select id="cmboCountryList"></select><br />
-        Company State Name
-        <select id="cmboStateList"></select><br />
-        Company City Name
-        <select id="cmboCityList"></select><br />
-        Company Area Name
-        <select id="cmboAreaList"></select><br />
-        Company Email
-        <input type="text" id="txtCompany_Email" /><br />
-        Company Contact Person
-        <input type="text" id="txtCompany_Contact_Person" /><br />
-        Company Contact No
-        <input type="text" id="txtCompany_Contact_No" /><br />
-        Company Fax No
-        <input type="text" id="txtCompany_Fax_No" /><br />
-        Company Pan No
-        <input type="text" id="txtCompany_Pan_No" /><br />
-        Company Registration No
-        <input type="text" id="txtCompany_Registration_No" /><br />
-        Company GST No
-        <input type="text" id="txtCompany_GST_In" /><br />
-        Company Logo
-        <input type="text" id="txtCompany_Logo" /><br />
-        Company Bank Id
-        <input type="text" id="txtCompany_Bank_Id" /><br />
-        Company Bank Branch Id
-        <input type="text" id="txtCompany_Bank_Branch_Id" /><br />
-        Company Branch IFSC
-        <input type="text" id="txtCompany_Branch_IFSC" /><br />
-        Company Account No
-        <input type="text" id="txtCompany_Account_No" /><br />
-        Company CIN No
-        <input type="text" id="txtCompany_CIN_No" /><br />
-        Company CST No
-        <input type="text" id="txtCompany_CST_No" /><br />
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">COMPANY NAME</a>
+            </div>
 
-        <input type="button" id="btnSave" value="SAVE" />
-        <input type="button" id="btnUpdate" value="UPDATE" />
-        <div id="lstCompanyList"></div>
-    </div>
+            <div class="header-right">
+
+                <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
+                <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <!--<li>
+                        <div class="user-img-div">
+                            <img src="assets/img/user.png" class="img-thumbnail" />
+
+                            <div class="inner-text">
+                                Jhon Deo Alex
+                                <br />
+                                <small>Last Login : 2 Weeks Ago </small>
+                            </div>
+                        </div>
+
+                    </li>-->
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-dashboard "></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Masters <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Country_Mst.html"><i class="fa fa-edit"></i>Country Master</a>
+                            </li>
+                            <li>
+                                <a href="Zone_Mst.html"><i class="fa fa-edit "></i>Zone Master</a>
+                            </li>
+                            <li>
+                                <a href="State_Mst.html"><i class="fa fa-edit "></i>State Master</a>
+                            </li>
+                            <li>
+                                <a href="City_Mst.html"><i class="fa fa-edit "></i>City Master</a>
+                            </li>
+                            <li>
+                                <a href="Area_Mst.html"><i class="fa fa-edit "></i>Area Master</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Plan Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Plan_Mst.html"><i class="fa fa-coffee"></i>Plan Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Plan_Type_Mst.html"><i class="fa fa-flash "></i>Plan Types</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Question Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Question_Mst.html"><i class="fa fa-coffee"></i>Question Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Question_Categary_Mst.html"><i class="fa fa-flash "></i>Question Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Exam Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Exam_Mst.html"><i class="fa fa-coffee"></i>Exam Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Type_Mst.html"><i class="fa fa-flash "></i>Exam Type Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Category_Mst.html"><i class="fa fa-flash "></i>Exam Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="ta.html"><i class="fa fa-flash "></i>User Info </a>
+                    </li>-->
+
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Subscription </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-code "></i>Subscription Plan</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-sign-in "></i>Login Page</a>
+                    </li>
+                    <!--<li>
+                        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+                    </li>-->
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <!--<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Basic Forms</h1>
+                    </div>
+                </div>-->
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                Company Info Master
+                            </div>
+                            
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Id</label>
+                                    <input class="form-control" type="text" id="txtCompanyId">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input class="form-control" type="text" id="txtCompany_Name">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Address</label>
+                                    <input class="form-control" type="text" id="txtCompany_Address">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Pincode</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Pincode">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Country Id</label>
+                                    <select class="form-control" id="cmboCountryList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company State Name</label>
+                                    <select class="form-control" id="cmboStateList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company City Name</label>
+                                    <select class="form-control" id="cmboCityList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Area Name</label>
+                                    <select class="form-control" id="cmboAreaList"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Email</label>
+                                    <input class="form-control" type="text" id="txtCompany_Email">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Contact Person</label>
+                                    <input class="form-control" type="text" id="txtCompany_Contact_Person">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Contact No</label>
+                                    <input class="form-control" type="text" id="txtCompany_Contact_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Fax No</label>
+                                    <input class="form-control" type="text" id="txtCompany_Fax_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Pan No</label>
+                                    <input class="form-control" type="text" id="txtCompany_Pan_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Registration No</label>
+                                    <input class="form-control" type="text" id="txtCompany_Registration_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company GST No</label>
+                                    <input class="form-control" type="text" id="txtCompany_GST_In">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Company Logo</label>
+                                    <input class="form-control" type="text" id="txtCompany_Logo">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company Bank Id</label>
+                                    <input class="form-control" type="text" id="txtCompany_Bank_Id">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Company Bank Branch Id</label>
+                                    <input class="form-control" type="text" id="txtCompany_Bank_Branch_Id">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company Branch IFSC</label>
+                                    <input class="form-control" type="text" id="txtCompany_Branch_IFSC">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company Account No</label>
+                                    <input class="form-control" type="text" id="txtCompany_Account_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company CIN No</label>
+                                    <input class="form-control" type="text" id="txtCompany_CIN_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Company CST No</label>
+                                    <input class="form-control" type="text" id="txtCompany_CST_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-success" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
+                                </div>
+                            </div>
+                        </div>                                
+                    </div>
+                </div><br />
+            <div id="lstCompanyList"></div>
+            </div>
+        </div>         
+    </div><!-- /. WRAPPER  -->
+
+        <!--<div id="footer-sec">
+            &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
+        </div>-->
+
+        <!-- /. FOOTER  -->
+        <!-- JQUERY SCRIPTS -->
+        <script src="Scripts/jquery-3.3.1.min.js"></script>
+        <!--<script src="js/jquery-1.10.2.js"></script>-->
+        <!-- BOOTSTRAP SCRIPTS -->
+        <script src="js/bootstrap.js"></script>
+        <!-- METISMENU SCRIPTS -->
+        <script src="js/jquery.metisMenu.js"></script>
+        <!-- CUSTOM SCRIPTS -->
+        <script src="js/custom.js"></script>
+        <!--api scripts-->
+        <script src="/CustomScripts/jsCompanyInfo.js"></script>
+
 </body>
 </html>

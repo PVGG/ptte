@@ -2,57 +2,311 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <script src="/Scripts/jquery-3.3.1.min.js"></script>
-    <script src="/CustomScripts/jsCustomerMst.js"></script>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTTE</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
-    <div>
-        <input type="text" id="txtCustomerId" /><br />
-        Customer Name
-        <input type="text" id="txtCustomer_Name" /><br />
-        Customer Address
-        <input type="text" id="txtCustomer_Address" /><br />
-        Customer Contact No
-        <input type="text" id="txtCustomer_Contact_No" /><br />
-        Customer Pincode
-        <input type="text" id="txtCustomer_Pincode" /><br />
-        Customer Country Id
-        <select id="cmboCountryList"></select><br />
-        Customer Zone Name
-        <select id="cmboZoneList"></select><br />
-        Customer State Name
-        <select id="cmboStateList"></select><br />
-        Customer City Name
-        <select id="cmboCityList"></select><br />
-        Customer Area Name
-        <select id="cmboAreaList"></select><br />
-        Customer Email
-        <input type="text" id="txtCustomer_Email" /><br />
-        Customer Contact Person
-        <input type="text" id="txtCustomer_Contact_Person" /><br />
-        Customer Registration No
-        <input type="text" id="txtCustomer_Registration_No" /><br />
-        Customer GST No
-        <input type="text" id="txtCustomer_GST_In" /><br />
-        Customer Logo
-        <input type="text" id="txtCustomer_Logo" /><br />
-        Customer Bank Id
-        <input type="text" id="txtCustomer_Bank_Id" /><br />
-        Customer Bank Branch Id
-        <input type="text" id="txtCustomer_Bank_Branch_Id" /><br />
-        Customer Branch IFSC
-        <input type="text" id="txtCustomer_Branch_IFSC" /><br />
-        Customer Account No
-        <input type="text" id="txtCustomer_Account_No" /><br />
-        Customer Subscription Date
-        <input type="date" id="txtCustomer_First_Subscription_Date" /><br />
-        Parent Id
-        <input type="text" id="txtParent_Id" /><br />
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">COMPANY NAME</a>
+            </div>
 
-        <input type="button" id="btnSave" value="SAVE" />
-        <input type="button" id="btnUpdate" value="UPDATE" />
-        <div id="lstCustomerList"></div>
-    </div>
+            <div class="header-right">
+
+                <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
+                <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <!--<li>
+                        <div class="user-img-div">
+                            <img src="assets/img/user.png" class="img-thumbnail" />
+
+                            <div class="inner-text">
+                                Jhon Deo Alex
+                                <br />
+                                <small>Last Login : 2 Weeks Ago </small>
+                            </div>
+                        </div>
+
+                    </li>-->
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-dashboard "></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Masters <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Country_Mst.html"><i class="fa fa-edit"></i>Country Master</a>
+                            </li>
+                            <li>
+                                <a href="Zone_Mst.html"><i class="fa fa-edit "></i>Zone Master</a>
+                            </li>
+                            <li>
+                                <a href="State_Mst.html"><i class="fa fa-edit "></i>State Master</a>
+                            </li>
+                            <li>
+                                <a href="City_Mst.html"><i class="fa fa-edit "></i>City Master</a>
+                            </li>
+                            <li>
+                                <a href="Area_Mst.html"><i class="fa fa-edit "></i>Area Master</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Plan Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Plan_Mst.html"><i class="fa fa-coffee"></i>Plan Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Plan_Type_Mst.html"><i class="fa fa-flash "></i>Plan Types</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Question Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Question_Mst.html"><i class="fa fa-coffee"></i>Question Master</a>
+                            </li>
+
+                            <li>
+                                <a href="Question_Categary_Mst.html"><i class="fa fa-flash "></i>Question Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-yelp "></i>Exam Master <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="Exam_Mst.html"><i class="fa fa-coffee"></i>Exam Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Type_Mst.html"><i class="fa fa-flash "></i>Exam Type Master</a>
+                            </li>
+                            <li>
+                                <a href="Exam_Category_Mst.html"><i class="fa fa-flash "></i>Exam Catagory</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="ta.html"><i class="fa fa-flash "></i>User Info </a>
+                    </li>-->
+
+                    <li>
+                        <a href="#"><i class="fa fa-desktop "></i>Subscription </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-code "></i>Subscription Plan</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-sign-in "></i>Login Page</a>
+                    </li>
+                    <!--<li>
+                        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+                    </li>-->
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <!--<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Basic Forms</h1>
+                    </div>
+                </div>-->
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                Customer Info Master
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Id</label>
+                                    <input class="form-control" type="text" id="txtCustomerId">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Customer Name</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Name">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Customer Address</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Address">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Contact No</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Contact_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer Pincode</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Pincode">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Country Id</label>
+                                    <select class="form-control" id="cmboCountryList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Zone Name</label>
+                                    <select class="form-control" id="cmboZoneList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer State Name</label>
+                                    <select class="form-control" id="cmboStateList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer City Name</label>
+                                    <select class="form-control" id="cmboCityList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Area Name</label>
+                                    <select class="form-control" id="cmboAreaList"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Email</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Email">                                  
+                                </div>
+                                <div class="form-group">
+                                    <label>Customer Contact Person</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Contact_Person">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Registration No</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Registration_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label> Customer GST No</label>
+                                    <input class="form-control" type="text" id="txtCustomer_GST_In">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Customer Logo</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Logo">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer Bank Id</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Bank_Id">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Customer Bank Branch Id</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Bank_Branch_Id">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer Branch IFSC</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Branch_IFSC">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer Account No</label>
+                                    <input class="form-control" type="text" id="txtCustomer_Account_No">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Customer Subscription Date</label>
+                                    <input class="form-control" type="date" id="txtCustomer_First_Subscription_Date">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Parent Id</label>
+                                    <input class="form-control" type="text" id="txtParent_Id">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-success" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br />
+                <div id="lstCustomerList"></div>
+            </div>
+        </div>
+    </div><!-- /. WRAPPER  -->
+    <!--<div id="footer-sec">
+        &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
+    </div>-->
+    <!-- /. FOOTER  -->
+    <!-- JQUERY SCRIPTS -->
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <!--<script src="js/jquery-1.10.2.js"></script>-->
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="js/custom.js"></script>
+    <!--api scripts-->
+    <script src="/CustomScripts/jsCustomerMst.js"></script>
+
 </body>
 </html>

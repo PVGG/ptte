@@ -64,6 +64,7 @@ function exam_list() {
             var jsonData = eval('(' + responseFromServer + ')');
             //alert(jsonData[0].index_id);
             var tbl = "<table width='100%'>";
+            tbl += "<tr><th>Id</th><th>Exam Name</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 tbl += "<tr>";
                 tbl += "<td>";
@@ -72,11 +73,11 @@ function exam_list() {
                 tbl += "<td>";
                 tbl += jsonData[iCount].exam_name;
                 tbl += "</td>";
-                tbl += "<td>";
-                tbl += "<button type='button' class='btn btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'>DELETE</button>";
+                tbl += "<td width='25%'>";
+                tbl += "<i type='button' class='fa fa-trash btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
-                tbl += "<td>";
-                tbl += "<button type='button' class='btn btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'>UPDATE</button>";
+                tbl += "<td width='25%'>";
+                tbl += "<i type='button' class='fa fa-edit btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "</tr>";
             }
@@ -128,7 +129,7 @@ function customer_list() {
             var cmbOptions = "";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 cmbOptions += "<option value=" + jsonData[iCount].index_id + ">";
-                cmbOptions += jsonData[iCount].customer_id;
+                cmbOptions += jsonData[iCount].customer_name;
                 cmbOptions += "</option>";
             }
             $("#cmboCustomerIdList").html(cmbOptions);
@@ -153,7 +154,7 @@ function exam_type_id_list() {
             var cmbOptions = "";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 cmbOptions += "<option value=" + jsonData[iCount].index_id + ">";
-                cmbOptions += jsonData[iCount].exam_type_id;
+                cmbOptions += jsonData[iCount].exam_type_name;
                 cmbOptions += "</option>";
             }
             $("#cmboExamTypeIdList").html(cmbOptions);
@@ -178,7 +179,7 @@ function level_list() {
             var cmbOptions = "";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 cmbOptions += "<option value=" + jsonData[iCount].index_id + ">";
-                cmbOptions += jsonData[iCount].level_id;
+                cmbOptions += jsonData[iCount].level_name;
                 cmbOptions += "</option>";
             }
             $("#cmboLevelList").html(cmbOptions);
@@ -203,7 +204,7 @@ function exam_category_list() {
             var cmbOptions = "";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 cmbOptions += "<option value=" + jsonData[iCount].index_id + ">";
-                cmbOptions += jsonData[iCount].exam_category_id;
+                cmbOptions += jsonData[iCount].exam_category_name;
                 cmbOptions += "</option>";
             }
             $("#cmboExamCategoryList").html(cmbOptions);
@@ -231,7 +232,7 @@ function update(id) {
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 $("#txtExam_Id").val(jsonData[0].index_id);
                 $("#txtExam_Name").val(jsonData[0].exam_name); 
-                $("#cmboExamCategoryList").val(jsonData[0].exam_category_id);
+                $("#cmboExamCategoryList").val(jsonData[0].exam_category_name);
 
             }
             exam_list();
