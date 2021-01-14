@@ -13,16 +13,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/25/2020 10:29:25</publishTime>
     </File>
     <File Include="Area_Mst.html">
-      <publishTime>01/13/2021 15:13:07</publishTime>
+      <publishTime>01/14/2021 13:12:41</publishTime>
     </File>
     <File Include="Assign_Page_To_User.html">
       <publishTime>01/06/2021 17:50:45</publishTime>
     </File>
     <File Include="bin/AdminPanel.dll">
-      <publishTime>01/13/2021 17:48:05</publishTime>
+      <publishTime>01/14/2021 17:39:03</publishTime>
     </File>
     <File Include="bin/AdminPanel.pdb">
-      <publishTime>01/13/2021 17:48:05</publishTime>
+      <publishTime>01/14/2021 17:39:03</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 16:29:20</publishTime>
@@ -226,7 +226,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/13/2021 16:33:37</publishTime>
     </File>
     <File Include="CustomScripts/jsAreaMst.js">
-      <publishTime>01/08/2021 18:33:05</publishTime>
+      <publishTime>01/14/2021 12:47:04</publishTime>
     </File>
     <File Include="CustomScripts/jsAssignPageToUser.js">
       <publishTime>01/06/2021 17:53:14</publishTime>
@@ -247,52 +247,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/13/2021 17:11:26</publishTime>
     </File>
     <File Include="CustomScripts/jsExamMst.js">
-      <publishTime>01/13/2021 17:46:05</publishTime>
+      <publishTime>01/14/2021 12:43:36</publishTime>
+    </File>
+    <File Include="CustomScripts/jsExamQuestionMst.js">
+      <publishTime>01/14/2021 15:58:40</publishTime>
     </File>
     <File Include="CustomScripts/jsExamTypeMst.js">
-      <publishTime>01/12/2021 12:52:47</publishTime>
+      <publishTime>01/14/2021 12:49:45</publishTime>
     </File>
     <File Include="CustomScripts/jsLevelMst.js">
-      <publishTime>01/13/2021 17:46:11</publishTime>
+      <publishTime>01/14/2021 12:50:25</publishTime>
     </File>
     <File Include="CustomScripts/jsLogDetails.js">
-      <publishTime>01/07/2021 12:44:02</publishTime>
+      <publishTime>01/14/2021 14:52:51</publishTime>
     </File>
     <File Include="CustomScripts/jsModuleMst.js">
-      <publishTime>01/08/2021 18:10:17</publishTime>
+      <publishTime>01/14/2021 12:58:57</publishTime>
     </File>
     <File Include="CustomScripts/jsPlanDetailsMst.js">
       <publishTime>01/02/2021 16:54:12</publishTime>
     </File>
+    <File Include="CustomScripts/jsPlanExamDetails.js">
+      <publishTime>01/14/2021 17:36:40</publishTime>
+    </File>
     <File Include="CustomScripts/jsPlanMst.js">
-      <publishTime>01/13/2021 12:50:31</publishTime>
+      <publishTime>01/14/2021 12:59:53</publishTime>
     </File>
     <File Include="CustomScripts/jsPlanTypeMst.js">
-      <publishTime>01/09/2021 16:25:31</publishTime>
+      <publishTime>01/14/2021 13:02:48</publishTime>
     </File>
     <File Include="CustomScripts/jsQuestionCategaryMst.js">
-      <publishTime>01/12/2021 17:03:36</publishTime>
+      <publishTime>01/14/2021 13:04:07</publishTime>
     </File>
     <File Include="CustomScripts/jsQuestionMst.js">
       <publishTime>01/13/2021 12:49:33</publishTime>
     </File>
     <File Include="CustomScripts/jsRoleMst.js">
-      <publishTime>01/12/2021 12:11:47</publishTime>
+      <publishTime>01/14/2021 13:05:25</publishTime>
     </File>
     <File Include="CustomScripts/jsStateMst.js">
-      <publishTime>01/09/2021 15:34:30</publishTime>
+      <publishTime>01/14/2021 13:08:34</publishTime>
     </File>
     <File Include="CustomScripts/jsSubscriptionMst.js">
-      <publishTime>01/12/2021 10:59:25</publishTime>
+      <publishTime>01/14/2021 13:53:53</publishTime>
     </File>
     <File Include="CustomScripts/jsSubscriptionPlanMst.js">
-      <publishTime>01/12/2021 11:42:23</publishTime>
+      <publishTime>01/14/2021 13:57:19</publishTime>
     </File>
     <File Include="CustomScripts/jsSystemPagesMst.js">
-      <publishTime>01/12/2021 12:11:44</publishTime>
+      <publishTime>01/14/2021 14:01:01</publishTime>
     </File>
     <File Include="CustomScripts/jsZoneMst.js">
-      <publishTime>01/09/2021 16:10:41</publishTime>
+      <publishTime>01/14/2021 13:10:29</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>12/25/2020 10:40:13</publishTime>
@@ -303,8 +309,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Exam_Mst.html">
       <publishTime>01/13/2021 17:46:18</publishTime>
     </File>
+    <File Include="Exam_Question_Mst.html">
+      <publishTime>01/14/2021 15:30:53</publishTime>
+    </File>
     <File Include="Exam_Type_Mst.html">
-      <publishTime>01/12/2021 17:45:48</publishTime>
+      <publishTime>01/14/2021 13:20:01</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/25/2020 10:29:25</publishTime>
@@ -376,34 +385,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/08/2021 15:24:47</publishTime>
     </File>
     <File Include="Level_Mst.html">
-      <publishTime>01/12/2021 17:38:28</publishTime>
+      <publishTime>01/14/2021 13:24:16</publishTime>
     </File>
     <File Include="LogDetails.html">
-      <publishTime>01/07/2021 12:41:02</publishTime>
+      <publishTime>01/14/2021 15:00:10</publishTime>
     </File>
     <File Include="Module_Mst.aspx">
       <publishTime>12/26/2020 10:18:53</publishTime>
     </File>
     <File Include="Module_Mst.html">
-      <publishTime>01/12/2021 17:46:01</publishTime>
+      <publishTime>01/14/2021 13:26:46</publishTime>
     </File>
     <File Include="Plan_Details_Mst.html">
       <publishTime>01/04/2021 15:35:39</publishTime>
     </File>
+    <File Include="Plan_Exam_Details.html">
+      <publishTime>01/14/2021 17:37:05</publishTime>
+    </File>
     <File Include="Plan_Mst.html">
-      <publishTime>01/13/2021 12:50:34</publishTime>
+      <publishTime>01/14/2021 13:37:46</publishTime>
     </File>
     <File Include="Plan_Type_Mst.html">
-      <publishTime>01/12/2021 17:46:23</publishTime>
+      <publishTime>01/14/2021 13:41:04</publishTime>
     </File>
     <File Include="Question_Categary_Mst.html">
-      <publishTime>01/12/2021 17:46:33</publishTime>
+      <publishTime>01/14/2021 13:44:28</publishTime>
     </File>
     <File Include="Question_Mst.html">
-      <publishTime>01/13/2021 12:50:27</publishTime>
+      <publishTime>01/14/2021 13:46:38</publishTime>
     </File>
     <File Include="Role_Mst.html">
-      <publishTime>01/12/2021 12:03:20</publishTime>
+      <publishTime>01/14/2021 13:48:03</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>12/25/2020 10:30:10</publishTime>
@@ -502,16 +514,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/25/2020 10:30:17</publishTime>
     </File>
     <File Include="State_Mst.html">
-      <publishTime>01/12/2021 17:37:28</publishTime>
+      <publishTime>01/14/2021 13:49:54</publishTime>
     </File>
     <File Include="Subscription_Mst.html">
-      <publishTime>01/12/2021 17:46:54</publishTime>
+      <publishTime>01/14/2021 13:51:41</publishTime>
     </File>
     <File Include="Subscription_Plan_Mst.html">
-      <publishTime>01/12/2021 17:47:04</publishTime>
+      <publishTime>01/14/2021 13:55:31</publishTime>
     </File>
     <File Include="System_Pages_Mst.html">
-      <publishTime>01/12/2021 17:36:55</publishTime>
+      <publishTime>01/14/2021 13:59:50</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>12/25/2020 10:30:17</publishTime>
@@ -520,7 +532,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/09/2021 17:35:08</publishTime>
     </File>
     <File Include="Zone_Mst.html">
-      <publishTime>01/12/2021 17:47:19</publishTime>
+      <publishTime>01/14/2021 13:58:54</publishTime>
     </File>
   </ItemGroup>
 </Project>

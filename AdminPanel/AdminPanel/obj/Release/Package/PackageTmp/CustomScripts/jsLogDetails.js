@@ -75,23 +75,24 @@ function log_detail_list() {
             //alert(responseFromServer);
             var jsonData = eval('(' + responseFromServer + ')');
             //alert(jsonData[0].index_id);
-            var tbl = "<table>";
+            var tbl = "<table width='100%'>";
+            tbl += "<tr><th>Id</th><th>Login Date Time</th><th>Logout Date Time</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 tbl += "<tr>";
-                tbl += "<td>";
+                tbl += "<td width='10%'>";
                 tbl += iCount + 1;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td width='25%'>";
                 tbl += jsonData[iCount].login_date_time;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td width='25%'>";
                 tbl += jsonData[iCount].logout_date_time;
                 tbl += "</td>";
-                tbl += "<td>";
-                tbl += "<input type='button' value='DELETE' onclick='del(" + jsonData[iCount].index_id + ")'>";
+                tbl += "<td width='20%'>";
+                tbl += "<i type='button' class='fa fa-trash btn-danger' onclick='del(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
-                tbl += "<td>";
-                tbl += "<input type='button' value='UPDATE' onclick='update(" + jsonData[iCount].index_id + ")'>";
+                tbl += "<td width='20%'>";
+                tbl += "<i type='button' class='fa fa-edit btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "</tr>";
             }

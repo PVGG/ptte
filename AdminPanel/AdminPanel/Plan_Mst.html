@@ -172,64 +172,61 @@
                     </div>
                 </div>-->
                 <!-- /. ROW  -->
+                
+
                 <div class="row">
                     <div class="col-md-12 col-sm-6 col-xs-12">
-                        <div class="panel panel-info">
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-6 col-xs-12">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">
-                                            Plan Master
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="form-group">
-                                                <label>Id</label>
-                                                <input class="form-control" type="text" id="txtPlanId">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Plan Type Name</label>
-                                                <select class="form-control" id="cmboPlan_Type_List"></select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Plan Name</label>
-                                                <input class="form-control" type="text" id="txtPlanName">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Value </label>
-                                                <input type="text" id="value">
-                                                <label> Price </label>
-                                                <input type="text" id="price">
-                                                <label> Notes </label>
-                                                <input type="text" id="notes">
-                                            </div>
-                                            <button type="button" class="btn btn-info" id="btnAdd">Add </button>
-
-                                        </div>
-                                        <table width="100%">
-                                            <tr>
-                                                <td>Value</td>
-                                                <td>Price</td>
-                                                <td>Notes</td>
-                                            </tr>
-                                            <tbody id="tblData"></tbody>
-                                        </table>
-                                    </div>
-                                    <button type="button" class="btn btn-info" id="btnSubmit">Save </button>
-                                    <button type="button" class="btn btn-warning" id="btnCancel">Update </button>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center">
+                                Plan Master
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Id</label>
+                                    <input class="form-control" type="text" id="txtPlanId">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Plan Type Name</label>
+                                    <select class="form-control" id="cmboPlan_Type_List"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label> Plan Name</label>
+                                    <input class="form-control" type="text" id="txtPlanName">
+                                    <p class="help-block">Help text here.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Value </label>
+                                    <input type="text" id="value">
+                                    <label> Price </label>
+                                    <input type="text" id="price">
+                                    <label> Notes </label>
+                                    <input type="text" id="notes">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-info" id="btnAdd">Add </button>
                                 </div>
 
-                            </div><br />
-
-
-                            <div id="lstPlan_List"></div>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <th>Value</th>
+                                        <th>Price</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                    <tbody id="tblData"></tbody>
+                                </table>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-info" id="btnSubmit">Save </button>
+                                <button type="button" class="btn btn-warning" id="btnCancel">Update </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!-- /. WRAPPER  -->
+                <div id="lstPlan_List"></div>
+            </div>                  
+        </div>
+    </div><!-- /. WRAPPER  -->
         <!--<div id="footer-sec">
         &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
     </div>-->

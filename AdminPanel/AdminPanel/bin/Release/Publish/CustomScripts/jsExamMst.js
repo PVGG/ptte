@@ -67,10 +67,10 @@ function exam_list() {
             tbl += "<tr><th>Id</th><th>Exam Name</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 tbl += "<tr>";
-                tbl += "<td>";
+                tbl += "<td width='10'>";
                 tbl += iCount + 1;
                 tbl += "</td>";
-                tbl += "<td>";
+                tbl += "<td width='40%'>";
                 tbl += jsonData[iCount].exam_name;
                 tbl += "</td>";
                 tbl += "<td width='25%'>";
@@ -104,7 +104,7 @@ function question_categary_list() {
             var cmbOptions = "";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 cmbOptions += "<option value=" + jsonData[iCount].index_id + ">";
-                cmbOptions += jsonData[iCount].question_categories;
+                cmbOptions += jsonData[iCount].question_category_name;
                 cmbOptions += "</option>";
             }
             $("#cmboQuestionCategoryList").html(cmbOptions);

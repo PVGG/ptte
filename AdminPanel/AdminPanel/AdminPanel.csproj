@@ -138,10 +138,12 @@
     <Content Include="CustomScripts\jsCustomerMst.js" />
     <Content Include="CustomScripts\jsExamCategoryMst.js" />
     <Content Include="CustomScripts\jsExamMst.js" />
+    <Content Include="CustomScripts\jsExamQuestionMst.js" />
     <Content Include="CustomScripts\jsExamTypeMst.js" />
     <Content Include="CustomScripts\jsLevelMst.js" />
     <Content Include="CustomScripts\jsLogDetails.js" />
     <Content Include="CustomScripts\jsModuleMst.js" />
+    <Content Include="CustomScripts\jsPlanExamDetails.js" />
     <Content Include="CustomScripts\jsPlanMst.js" />
     <Content Include="CustomScripts\jsPlanDetailsMst.js" />
     <Content Include="CustomScripts\jsQuestionCategaryMst.js" />
@@ -156,6 +158,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Exam_Category_Mst.html" />
     <Content Include="Exam_Mst.html" />
+    <Content Include="Exam_Question_Mst.html" />
     <Content Include="Exam_Type_Mst.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -183,6 +186,7 @@
     <Content Include="Level_Mst.html" />
     <Content Include="LogDetails.html" />
     <Content Include="Plan_Details_Mst.html" />
+    <Content Include="Plan_Exam_Details.html" />
     <Content Include="Plan_Mst.html" />
     <Content Include="Plan_Type_Mst.html" />
     <Content Include="Question_Mst.html" />

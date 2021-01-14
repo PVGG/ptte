@@ -75,6 +75,7 @@ function question_categary_list() {
             var jsonData = eval('(' + responseFromServer + ')');
             //alert(jsonData[0].index_id);
             var tbl = "<table width='100%'>";
+            tbl += "<tr><th>Id</th><th>Question Category Name</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 tbl += "<tr>";
                 tbl += "<td width='10%'>";
@@ -84,10 +85,10 @@ function question_categary_list() {
                 tbl += jsonData[iCount].question_category_name;
                 tbl += "</td>";
                 tbl += "<td width='25%'>";
-                tbl += "<button type='button' class='btn btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'>DELETE</button>";
+                tbl += "<i type='button' class='fa fa-trash btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "<td width='25%'>";
-                tbl += "<button type='button' class='btn btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'>UPDATE</button>";
+                tbl += "<i type='button' class='fa fa-edit btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "</tr>";
             }
