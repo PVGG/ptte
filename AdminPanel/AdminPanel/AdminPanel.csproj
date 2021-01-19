@@ -143,6 +143,7 @@
     <Content Include="CustomScripts\jsLevelMst.js" />
     <Content Include="CustomScripts\jsLogDetails.js" />
     <Content Include="CustomScripts\jsModuleMst.js" />
+    <Content Include="CustomScripts\jsMultipleChoiceQuestion.js" />
     <Content Include="CustomScripts\jsPlanExamDetails.js" />
     <Content Include="CustomScripts\jsPlanMst.js" />
     <Content Include="CustomScripts\jsPlanDetailsMst.js" />
@@ -185,10 +186,12 @@
     <Content Include="js\wizard\modernizr-2.6.2.min.js" />
     <Content Include="Level_Mst.html" />
     <Content Include="LogDetails.html" />
+    <Content Include="Multiple_Choice_Question.html" />
     <Content Include="Plan_Details_Mst.html" />
     <Content Include="Plan_Exam_Details.html" />
     <Content Include="Plan_Mst.html" />
     <Content Include="Plan_Type_Mst.html" />
+    <Content Include="Question_Categary_Mst.html" />
     <Content Include="Question_Mst.html" />
     <Content Include="Role_Mst.html" />
     <Content Include="State_Mst.html" />
@@ -204,7 +207,6 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Module_Mst.aspx" />
     <Content Include="Module_Mst.html" />
-    <Content Include="Question_Categary_Mst.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

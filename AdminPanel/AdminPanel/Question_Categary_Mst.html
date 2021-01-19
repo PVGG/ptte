@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PTTE</title>
+    <title>PTTE | Question Category Master</title>
 
     <!-- BOOTSTRAP STYLES-->
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -42,17 +42,17 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <!--<li>
-        <div class="user-img-div">
-            <img src="assets/img/user.png" class="img-thumbnail" />
+                        <div class="user-img-div">
+                            <img src="assets/img/user.png" class="img-thumbnail" />
 
-            <div class="inner-text">
-                Jhon Deo Alex
-                <br />
-                <small>Last Login : 2 Weeks Ago </small>
-            </div>
-        </div>
+                            <div class="inner-text">
+                                Jhon Deo Alex
+                                <br />
+                                <small>Last Login : 2 Weeks Ago </small>
+                            </div>
+                        </div>
 
-    </li>-->
+                    </li>-->
 
 
                     <li>
@@ -117,8 +117,8 @@
                         </ul>
                     </li>
                     <!--<li>
-        <a href="ta.html"><i class="fa fa-flash "></i>User Info </a>
-    </li>-->
+                        <a href="ta.html"><i class="fa fa-flash "></i>User Info </a>
+                    </li>-->
 
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>Subscription </a>
@@ -132,33 +132,33 @@
                         <a href="#"><i class="fa fa-sign-in "></i>Login Page</a>
                     </li>
                     <!--<li>
-        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-            <li>
-                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
-            </li>
-            <li>
-                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                <ul class="nav nav-third-level">
-                    <li>
-                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
+                        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
                     </li>
+
                     <li>
-                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
-                    </li>
-
-                </ul>
-
-            </li>
-        </ul>
-    </li>
-
-    <li>
-        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
-    </li>-->
+                        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+                    </li>-->
                 </ul>
             </div>
 
@@ -176,63 +176,56 @@
                     <div class="col-md-12 col-sm-6 col-xs-12">
                         <div class="panel panel-primary">
 
-                            
-                                        <div class="panel-heading text-center">
-                                            Question Categary Master
-                                        </div>
 
-                                        <div class="panel-body">
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label> Id </label>
-                                                    <select class="form-control" id="cmboModuleList"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Categary Id </label>
-                                                <input class="form-control" type="text" id="txtCategaryId">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Categary Name </label>
-                                                <input class="form-control" type="text" id="txtCategaryName">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Notes </label>
-                                                <textarea class="form-control" type="text" id="txtCategaryName" rows="3"></textarea>
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Instructions </label>
-                                                <textarea class="form-control" type="text" id="txtInstructions" rows="3"></textarea>
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)" />
-                                            </div>
+                            <div class="panel-heading text-center">
+                                Question Categary Master
+                            </div>
 
-                                            <input type="hidden" id="base64" />
-                                            <div class="form-group text-center">
-                                                <button type="button" class="btn btn-success" id="btnSave">Save </button>
-                                                <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
-                                            </div>
-                                        </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>  Id </label>
+                                    <input class="form-control" type="text" id="txtCategaryId">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Module Name </label>
+                                        <select class="form-control" id="cmboModuleList"></select>
                                     </div>
-                                    
+                                </div>
+                                <div class="form-group">
+                                    <label> Categary Name </label>
+                                    <input class="form-control" type="text" id="txtCategaryName">
+                                </div>
+                                <div class="form-group">
+                                    <label> Notes </label>
+                                    <textarea class="form-control" type="text" id="txtCategaryName" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label> Instructions </label>
+                                    <textarea class="form-control" type="text" id="txtInstructions" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)" />
+                                </div>
 
-                                    <div id="lstQuestionCategaryList"></div>
+                                <input type="hidden" id="base64" />
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-success" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- /. WRAPPER  -->
-            
 
+
+                        <div id="lstQuestionCategaryList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /. WRAPPER  -->
     <!--<div id="footer-sec">
          &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
      </div>-->
-
     <!-- /. FOOTER  -->
     <!-- JQUERY SCRIPTS -->
     <script src="Scripts/jquery-3.3.1.min.js"></script>

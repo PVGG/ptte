@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿//var url_path ="http://localhost:50148/api/questionmst/";
+$(document).ready(function () {
     //alert("Hello");
     module_list();
     question_category_list();
@@ -7,10 +8,10 @@
     question_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"module_id":"' + $("#cmboModuleList").val() + '","question_category_id":"' + $("#cmboQuestionCategaryList").val() + '","customer_id":"' + $("#cmboCustomerList").val() + '","level_id":"' + $("#cmboLevelList").val() + '","record_begin_time":"' + $("#txtRecordBeginTime").val() + '","recording_time":"' + $("#txtRecordingTime").val() + '","wait_time":"' + $("#txtWaitTime").val() + '","excerpt":"' + $("#txtExcerpt").val() + '","instruction":"' + $("#txtInstruction").val() + '","description":"' + $("#txtDescription").val() + '","question":"' + $("#txtQuestion").val() + '","answer":"' + $("#txtAnswer").val() + '","user_id":"11"}]';
+        var requestData = '[{"module_id":"' + $("#cmboModuleList").val() + '","question_category_id":"' + $("#cmboQuestionCategaryList").val() + '","customer_id":"' + $("#cmboCustomerList").val() + '","level_id":"' + $("#cmboLevelList").val() + '","avi_file_url":"' + $("#base64").val()+'","record_begin_time":"' + $("#txtRecordBeginTime").val() + '","recording_time":"' + $("#txtRecordingTime").val() + '","wait_time":"' + $("#txtWaitTime").val() + '","excerpt":"' + $("#txtExcerpt").val() + '","instruction":"' + $("#txtInstruction").val() + '","description":"' + $("#txtDescription").val() + '","question":"' + $("#txtQuestion").val() + '","answer":"' + $("#txtAnswer").val() + '","user_id":"11"}]';
         $.ajax({
             type: "POST",
-            url: "https://trial.spyderxindia.com/api/questionmst",
+           url: "https://trial.spyderxindia.com/api/questionmst",
             data: JSON.stringify(requestData),
             contentType: "application/json",
             //datatype: "json",
@@ -25,7 +26,7 @@
 
     $("#btnUpdate").click(function () {
 
-        var requestData = '[{"module_id":"' + $("#cmboModuleList").val() + '","question_category_id":"' + $("#cmboQuestionCategaryList").val() + '","customer_id":"' + $("#cmboCustomerList").val() + '","level_id":"' + $("#cmboLevelList").val() + '","record_begin_time":"' + $("#txtRecordBeginTime").val() + '","recording_time":"' + $("#txtRecordingTime").val() + '","wait_time":"' + $("#txtWaitTime").val() + '","excerpt":"' + $("#txtExcerpt").val() + '","instruction":"' + $("#txtInstruction").val() + '","description":"' + $("#txtDescription").val() + '","question":"' + $("#txtQuestion").val() + '","answer":"' + $("#txtAnswer").val() + '","user_id":"11"}]';
+        var requestData = '[{"module_id":"' + $("#cmboModuleList").val() + '","question_category_id":"' + $("#cmboQuestionCategaryList").val() + '","customer_id":"' + $("#cmboCustomerList").val() + '","level_id":"' + $("#cmboLevelList").val() + '","avi_file_url":"' + $("#base64").val() +'","record_begin_time":"' + $("#txtRecordBeginTime").val() + '","recording_time":"' + $("#txtRecordingTime").val() + '","wait_time":"' + $("#txtWaitTime").val() + '","excerpt":"' + $("#txtExcerpt").val() + '","instruction":"' + $("#txtInstruction").val() + '","description":"' + $("#txtDescription").val() + '","question":"' + $("#txtQuestion").val() + '","answer":"' + $("#txtAnswer").val() + '","user_id":"11"}]';
         $.ajax({
             type: "PUT",
             url: "https://trial.spyderxindia.com/api/questionmst/" + $("#txtQuestionId").val(),
@@ -45,6 +46,20 @@
 });
 
 
+function encodeFiletoBase64(element) {
+    alert("BASE64");
+    var img = element.files[0];
+
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+
+        // $("#convertImg").attr("href", reader.result);
+
+        $("#base64").val(reader.result);
+    }
+    reader.readAsDataURL(img);
+}
 
 
 
@@ -248,7 +263,7 @@ function update(id) {
 
 function del(id) {
     $.ajax({
-        //url: "https://trial.spyderxindia.com/api/questionmst/3",
+        //url: "http://localhost:50148/api/questionmst/"+ id,
         type: "DELETE",
         //crossOrigin: true,
         url: "https://trial.spyderxindia.com/api/questionmst/" + id,

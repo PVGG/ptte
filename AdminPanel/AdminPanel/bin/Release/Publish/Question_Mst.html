@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PTTE</title>
+    <title>PTTE | Question Master</title>
 
     <!-- BOOTSTRAP STYLES-->
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -177,97 +177,90 @@
                         <div class="panel panel-primary">
 
                            
-                                        <div class="panel-heading text-center">
-                                            Question Master
-                                        </div>
+                            <div class="panel-heading text-center">
+                                Question Master
+                            </div>
 
-                                        <div class="panel-body">
-                                            <div class="form-group">
-                                                <label> Id </label>
-                                                <input class="form-control" type="text" id="txtQuestionId">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label> Module Id </label>
-                                                    <select class="form-control" id="cmboModuleList"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label> Question Category Id </label>
-                                                    <select class="form-control" id="cmboQuestionCategaryList"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label> Customer Id </label>
-                                                    <select class="form-control" id="cmboCustomerList"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <label> Level Id </label>
-                                                    <select class="form-control" id="cmboLevelList"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> AVI File URL </label>
-                                                <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)" />
-                                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label> Id </label>
+                                    <input class="form-control" type="text" id="txtQuestionId">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group col-md-6">
+                                        <label> Module Name </label>
+                                        <select class="form-control" id="cmboModuleList"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group col-md-6">
+                                        <label> Question Category Name </label>
+                                        <select class="form-control" id="cmboQuestionCategaryList"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group col-md-6">
+                                        <label> Customer Name </label>
+                                        <select class="form-control" id="cmboCustomerList"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group col-md-6">
+                                        <label> Level Name </label>
+                                        <select class="form-control" id="cmboLevelList"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label> AVI File URL </label>
+                                    <input type="file" id="fleFilePath" name="fleFilePath" onchange="encodeFiletoBase64(this)" />
+                                </div>
+                                <input type="hidden" id="base64" />
+                                <div class="form-group col-md-6">
+                                    <label>  Record Begin Time </label>
+                                    <input class="form-control" type="text" id="txtRecordBeginTime">
+                                </div>
 
-                                            <div class="form-group  col-md-6">
-                                                <label>  Record Begin Time </label>
-                                                <input class="form-control" type="text" id="txtRecordBeginTime">
-                                            </div>
-
-                                            <div class="form-group  col-md-6">
-                                                <label>  Recording Time </label>
-                                                <input class="form-control" type="text" id="txtRecordingTime">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label>  Wait Time </label>
-                                                <input class="form-control" type="text" id="txtWaitTime">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label>  Excerpt </label>
-                                                <input class="form-control" type="date" id="txtExcerpt">
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Instruction </label>
-                                                <textarea class="form-control" type="text" id="txtInstruction" rows="3"></textarea>
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Description </label>
-                                                <textarea class="form-control" type="text" id="txtDescription" rows="3"></textarea>
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Question </label>
-                                                <input class="form-control" type="text" id="txtQuestion">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>  Answer </label>
-                                                <input class="form-control" type="text" id="txtAnswer">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group text-center">
-                                                <button type="button" class="btn btn-success" id="btnSave">Save </button>
-                                                <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
-                                            </div>
-                                        </div>
-                                    </div>                                 
-                                    <div id="lstQuestionList"></div>
+                                <div class="form-group col-md-6">
+                                    <label>  Recording Time </label>
+                                    <input class="form-control" type="text" id="txtRecordingTime">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>  Wait Time </label>
+                                    <input class="form-control" type="text" id="txtWaitTime">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>  Excerpt </label>
+                                    <input class="form-control" type="date" id="txtExcerpt">
+                                </div>
+                                <div class="form-group">
+                                    <label> Instruction </label>
+                                    <textarea class="form-control" type="text" id="txtInstruction" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label> Description </label>
+                                    <textarea class="form-control" type="text" id="txtDescription" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label> Question </label>
+                                    <input class="form-control" type="text" id="txtQuestion">
+                                </div>
+                                <div class="form-group">
+                                    <label>  Answer </label>
+                                    <input class="form-control" type="text" id="txtAnswer">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-success" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
                                 </div>
                             </div>
-                        </div>
+                        </div>                                 
+                        <div id="lstQuestionList"></div>
                     </div>
-                </div><!-- /. WRAPPER  -->
+                </div>
             </div>
         </div>
-    </div>
+    </div><!-- /. WRAPPER  -->
+           
 
     <!--<div id="footer-sec">
         &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
