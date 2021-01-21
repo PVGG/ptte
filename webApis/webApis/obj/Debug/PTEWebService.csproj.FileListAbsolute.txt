@@ -1,3 +1,7 @@
+C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.pdb
+C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\webApis.dll.config
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\webApis.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\webApis.pdb
@@ -32,7 +36,9 @@ C:\Users\ADMIN\source\repos\webApis\webApis\bin\Microsoft.CodeDom.Providers.DotN
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\Newtonsoft.Json.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Net.Http.Formatting.dll
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Cors.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Helpers.dll
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.Cors.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.WebHost.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Mvc.dll
@@ -42,10 +48,11 @@ C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.WebPages.Deployment.d
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.WebPages.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.WebPages.Razor.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\WebGrease.dll
-C:\Users\ADMIN\source\repos\webApis\webApis\bin\Newtonsoft.Json.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Net.Http.Formatting.xml
-C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Helpers.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.xml
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.Cors.xml
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\Newtonsoft.Json.xml
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Helpers.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.WebHost.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Mvc.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Optimization.xml
@@ -55,11 +62,7 @@ C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.WebPages.Deployment.x
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.WebPages.Razor.xml
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\Antlr3.Runtime.pdb
 C:\Users\ADMIN\source\repos\webApis\webApis\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csprojAssemblyReference.cache
-C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\PTEWebService.csproj.CopyComplete
-C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.dll
-C:\Users\ADMIN\source\repos\webApis\webApis\obj\Debug\webApis.pdb
-C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Cors.dll
-C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.Cors.dll
-C:\Users\ADMIN\source\repos\webApis\webApis\bin\System.Web.Http.Cors.xml
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.config
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.dll
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.xml

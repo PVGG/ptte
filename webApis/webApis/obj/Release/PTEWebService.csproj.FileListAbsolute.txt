@@ -63,3 +63,6 @@ C:\Users\ADMIN\source\repos\webApis\webApis\obj\Release\PTEWebService.csproj.Cor
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Release\PTEWebService.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Release\webApis.dll
 C:\Users\ADMIN\source\repos\webApis\webApis\obj\Release\webApis.pdb
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.config
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.dll
+C:\Users\ADMIN\source\repos\webApis\webApis\bin\log4net.xml

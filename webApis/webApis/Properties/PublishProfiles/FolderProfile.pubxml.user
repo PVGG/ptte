@@ -78,6 +78,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
+    <File Include="bin/log4net.config">
+      <publishTime>01/15/2021 17:28:15</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>10/19/2020 06:40:10</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
@@ -202,10 +208,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/webApis.dll">
-      <publishTime>01/01/2021 16:19:08</publishTime>
+      <publishTime>01/19/2021 17:12:41</publishTime>
     </File>
     <File Include="bin/webApis.pdb">
-      <publishTime>01/01/2021 16:19:08</publishTime>
+      <publishTime>01/19/2021 17:12:41</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -258,6 +264,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>12/22/2020 12:04:36</publishTime>
     </File>
+    <File Include="log4net.config">
+      <publishTime>01/15/2021 17:28:15</publishTime>
+    </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>12/22/2020 12:05:15</publishTime>
     </File>
@@ -301,7 +310,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/22/2020 12:04:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/29/2020 12:22:31</publishTime>
+      <publishTime>01/15/2021 16:53:19</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -96,9 +96,12 @@ namespace PTEWebService.Models
             com.Parameters.AddWithValue("@created_by", user_id);
             com.Parameters.AddWithValue("@is_deleted", false);
             con.Open();
-            int i = com.ExecuteNonQuery();
+            int i= Convert.ToInt32(com.ExecuteScalar());
+            //int i = com.ExecuteNonQuery();
             con.Close();
+            return i.ToString();
 
+            /*
             if (i >= 1)
             {
                 return "Data Added Successfully";
@@ -106,7 +109,7 @@ namespace PTEWebService.Models
             else
             {
                 return "Data Not Added";
-            }
+            }*/
         }
         #endregion
         #region Update Plan

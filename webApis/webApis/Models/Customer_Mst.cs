@@ -153,48 +153,49 @@ namespace PTEWebService.Models
         int parent_id,
          int user_id)
         {
-            connection();
-            com = new SqlCommand("prManageCustomer_mst", con);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Action", "Insert");
-            com.Parameters.AddWithValue("@customer_name", customer_name);
+                connection();
+                com = new SqlCommand("prManageCustomer_mst", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Action", "Insert");
+                com.Parameters.AddWithValue("@customer_name", customer_name);
 
-            com.Parameters.AddWithValue("@customer_address", customer_address);
-            com.Parameters.AddWithValue("@customer_contact_no", customer_contact_no);
-            com.Parameters.AddWithValue("@customer_pincode", customer_pincode);
-            com.Parameters.AddWithValue("@customer_country_id", customer_country_id);
+                com.Parameters.AddWithValue("@customer_address", customer_address);
+                com.Parameters.AddWithValue("@customer_contact_no", customer_contact_no);
+                com.Parameters.AddWithValue("@customer_pincode", customer_pincode);
+                com.Parameters.AddWithValue("@customer_country_id", customer_country_id);
 
-            com.Parameters.AddWithValue("@customer_state_id", customer_state_id);
-            com.Parameters.AddWithValue("@customer_city_id", customer_city_id);
-            com.Parameters.AddWithValue("@customer_zone_id", customer_zone_id);
-            com.Parameters.AddWithValue("@customer_area_id", customer_area_id);
-            com.Parameters.AddWithValue("@customer_email", customer_email);
+                com.Parameters.AddWithValue("@customer_state_id", customer_state_id);
+                com.Parameters.AddWithValue("@customer_city_id", customer_city_id);
+                com.Parameters.AddWithValue("@customer_zone_id", customer_zone_id);
+                com.Parameters.AddWithValue("@customer_area_id", customer_area_id);
+                com.Parameters.AddWithValue("@customer_email", customer_email);
 
-            com.Parameters.AddWithValue("@customer_contact_person", customer_contact_person);
-            com.Parameters.AddWithValue("@customer_registration_no", customer_registration_no);
-            com.Parameters.AddWithValue("@customer_logo", customer_logo);
-            com.Parameters.AddWithValue("@customer_bank_id", customer_bank_id);
-            com.Parameters.AddWithValue("@customer_bank_branch_id", customer_bank_branch_id);
+                com.Parameters.AddWithValue("@customer_contact_person", customer_contact_person);
+                com.Parameters.AddWithValue("@customer_registration_no", customer_registration_no);
+                com.Parameters.AddWithValue("@customer_logo", customer_logo);
+                com.Parameters.AddWithValue("@customer_bank_id", customer_bank_id);
+                com.Parameters.AddWithValue("@customer_bank_branch_id", customer_bank_branch_id);
 
-            com.Parameters.AddWithValue("@customer_branch_ifsc", customer_branch_ifsc);
-            com.Parameters.AddWithValue("@customer_account_no", customer_account_no);
-            com.Parameters.AddWithValue("@customer_first_subscription_date", customer_first_subscription_date);
-            com.Parameters.AddWithValue("@parent_id", parent_id);
-                                   
-            com.Parameters.AddWithValue("@created_by", user_id);
-            com.Parameters.AddWithValue("@is_deleted", false);
-            con.Open();
-            int i = com.ExecuteNonQuery();
-            con.Close();
+                com.Parameters.AddWithValue("@customer_branch_ifsc", customer_branch_ifsc);
+                com.Parameters.AddWithValue("@customer_account_no", customer_account_no);
+                com.Parameters.AddWithValue("@customer_first_subscription_date", customer_first_subscription_date);
+                com.Parameters.AddWithValue("@parent_id", parent_id);
 
-            if (i >= 1)
-            {
-                return "Data Added Successfully";
-            }
-            else
-            {
-                return "Data Not Added";
-            }
+                com.Parameters.AddWithValue("@created_by", user_id);
+                com.Parameters.AddWithValue("@is_deleted", false);
+                con.Open();
+                int i = com.ExecuteNonQuery();
+                con.Close();
+
+                if (i >= 1)
+                {
+                    return "Data Added Successfully";
+                }
+                else
+                {
+                    return "Data Not Added";
+                }
+           
         }
         #endregion
         #region Update Customer

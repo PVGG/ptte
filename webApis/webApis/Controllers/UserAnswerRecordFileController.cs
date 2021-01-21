@@ -59,20 +59,20 @@ namespace PTEWebService.Controllers
 
                 try
                 {
-                    string baseData = Convert.ToString(jsonArr.av_url);
-                    string base64 = baseData.Split(',')[1];
+                    string baseData = Convert.ToString(jsonArr.av_file_url);
+                    /*string base64 = baseData.Split(',')[1];
                     string content_data = baseData.Split(',')[0];
                     string content_type_info = content_data.Split(';')[0];
                     string content_type = content_type_info.Split('/')[1];
                     if (content_type.Equals("x-msvideo"))
                     {
                         filePath = file_name + "." + "avi";
-                    }
+                    }*/
+                    filePath = file_name + "." + "avi";
 
+                    //byte[] bytes = Convert.FromBase64String(baseData);
 
-                    byte[] bytes = Convert.FromBase64String(base64);
-
-                    File.WriteAllBytes(root_dir + "/" + filePath, Convert.FromBase64String(base64));
+                    File.WriteAllBytes(root_dir + "/" + filePath, Convert.FromBase64String(baseData));
 
                     /* using (Image image = Image.FromStream(new MemoryStream(bytes)))
                      {

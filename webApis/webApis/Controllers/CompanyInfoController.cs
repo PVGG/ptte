@@ -55,7 +55,7 @@ namespace PTEWebService.Controllers
             int company_city_id = jsonArr.company_city_id;
             int company_area_id = jsonArr.company_area_id;
             string company_email = jsonArr.company_email;
-            string cucompany_contact_person = jsonArr.cucompany_contact_person;
+            string company_contact_person = jsonArr.company_contact_person;
             string company_contact_no = jsonArr.company_contact_no;
             string company_fax_no = jsonArr.company_fax_no;
             string company_pan_no = jsonArr.company_pan_no;
@@ -83,7 +83,7 @@ namespace PTEWebService.Controllers
          company_city_id,
          company_area_id,
          company_email,
-         cucompany_contact_person,
+         company_contact_person,
          company_contact_no,
          company_fax_no,
          company_pan_no,
@@ -120,7 +120,7 @@ namespace PTEWebService.Controllers
             int company_city_id = jsonArr.company_city_id;
             int company_area_id = jsonArr.company_area_id;
             string company_email = jsonArr.company_email;
-            string cucompany_contact_person = jsonArr.cucompany_contact_person;
+            string company_contact_person = jsonArr.company_contact_person;
             string company_contact_no = jsonArr.company_contact_no;
             string company_fax_no = jsonArr.company_fax_no;
             string company_pan_no = jsonArr.company_pan_no;
@@ -146,7 +146,7 @@ namespace PTEWebService.Controllers
          company_city_id,
          company_area_id,
          company_email,
-         cucompany_contact_person,
+         company_contact_person,
          company_contact_no,
          company_fax_no,
          company_pan_no,

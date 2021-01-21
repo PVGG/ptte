@@ -143,7 +143,7 @@ namespace PTEWebService.Models
         int company_city_id,
         int company_area_id,
         string company_email,
-        string cucompany_contact_person,
+        string company_contact_person,
         string company_contact_no,
         string company_fax_no,
         string company_pan_no,
@@ -158,48 +158,55 @@ namespace PTEWebService.Models
         string company_cst_no,
         int user_id)
         {
-            connection();
-            com = new SqlCommand("prManageCompany_info", con);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Action", "Insert");
-            com.Parameters.AddWithValue("@company_name", company_name);
-
-            com.Parameters.AddWithValue("@company_address", company_address);
-            com.Parameters.AddWithValue("@company_pincode", company_pincode);
-            com.Parameters.AddWithValue("@company_country_id", company_country_id);
-            com.Parameters.AddWithValue("@company_state_id", company_state_id);
-            com.Parameters.AddWithValue("@company_city_id", company_city_id);
-            com.Parameters.AddWithValue("@company_area_id", company_area_id);
-            com.Parameters.AddWithValue("@company_email", company_email);
-            com.Parameters.AddWithValue("@cucompany_contact_person", cucompany_contact_person);
-            com.Parameters.AddWithValue("@company_contact_no", company_contact_no);
-            com.Parameters.AddWithValue("@company_fax_no", company_fax_no);
-
-            com.Parameters.AddWithValue("@company_pan_no", company_pan_no);
-            com.Parameters.AddWithValue("@company_registration_no", company_registration_no);
-            com.Parameters.AddWithValue("@company_gstin_no", company_gstin_no);
-            com.Parameters.AddWithValue("@company_logo", company_logo);
-            com.Parameters.AddWithValue("@company_bank_id", company_bank_id);
-            com.Parameters.AddWithValue("@company_bank_branch_id", company_bank_branch_id);
-            com.Parameters.AddWithValue("@company_bank_ifsc", company_bank_ifsc);
-            com.Parameters.AddWithValue("@company_account_no", company_account_no);
-            com.Parameters.AddWithValue("@company_cin_no", company_cin_no);
-            com.Parameters.AddWithValue("@company_cst_no", company_cst_no);            
-
-
-            com.Parameters.AddWithValue("@created_by", user_id);
-            com.Parameters.AddWithValue("@is_deleted", false);
-            con.Open();
-            int i = com.ExecuteNonQuery();
-            con.Close();
-
-            if (i >= 1)
+            try
             {
-                return "Data Added Successfully";
+                connection();
+                com = new SqlCommand("prManageCompany_info", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Action", "Insert");
+                com.Parameters.AddWithValue("@company_name", company_name);
+
+                com.Parameters.AddWithValue("@company_address", company_address);
+                com.Parameters.AddWithValue("@company_pincode", company_pincode);
+                com.Parameters.AddWithValue("@company_country_id", company_country_id);
+                com.Parameters.AddWithValue("@company_state_id", company_state_id);
+                com.Parameters.AddWithValue("@company_city_id", company_city_id);
+                com.Parameters.AddWithValue("@company_area_id", company_area_id);
+                com.Parameters.AddWithValue("@company_email", company_email);
+                com.Parameters.AddWithValue("@company_contact_person", company_contact_person);
+                com.Parameters.AddWithValue("@company_contact_no", company_contact_no);
+                com.Parameters.AddWithValue("@company_fax_no", company_fax_no);
+
+                com.Parameters.AddWithValue("@company_pan_no", company_pan_no);
+                com.Parameters.AddWithValue("@company_registration_no", company_registration_no);
+                com.Parameters.AddWithValue("@company_gstin_no", company_gstin_no);
+                com.Parameters.AddWithValue("@company_logo", company_logo);
+                com.Parameters.AddWithValue("@company_bank_id", company_bank_id);
+                com.Parameters.AddWithValue("@company_bank_branch_id", company_bank_branch_id);
+                com.Parameters.AddWithValue("@company_bank_ifsc", company_bank_ifsc);
+                com.Parameters.AddWithValue("@company_account_no", company_account_no);
+                com.Parameters.AddWithValue("@company_cin_no", company_cin_no);
+                com.Parameters.AddWithValue("@company_cst_no", company_cst_no);
+
+
+                com.Parameters.AddWithValue("@created_by", user_id);
+                com.Parameters.AddWithValue("@is_deleted", false);
+                con.Open();
+                int i = com.ExecuteNonQuery();
+                con.Close();
+
+                if (i >= 1)
+                {
+                    return "Data Added Successfully";
+                }
+                else
+                {
+                    return "Data Not Added";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return "Data Not Added";
+                return ex.Message.ToString();
             }
         }
         #endregion
@@ -212,7 +219,7 @@ namespace PTEWebService.Models
         int company_city_id,
         int company_area_id,
         string company_email,
-        string cucompany_contact_person,
+        string company_contact_person,
         string company_contact_no,
         string company_fax_no,
         string company_pan_no,
@@ -241,7 +248,7 @@ namespace PTEWebService.Models
             com.Parameters.AddWithValue("@company_city_id", company_city_id);
             com.Parameters.AddWithValue("@company_area_id", company_area_id);
             com.Parameters.AddWithValue("@company_email", company_email);
-            com.Parameters.AddWithValue("@cucompany_contact_person", cucompany_contact_person);
+            com.Parameters.AddWithValue("@company_contact_person", company_contact_person);
             com.Parameters.AddWithValue("@company_contact_no", company_contact_no);
             com.Parameters.AddWithValue("@company_fax_no", company_fax_no);
 

@@ -149,6 +149,11 @@ namespace PTEWebService.Controllers
                         string file_name = av_url_file_name.Split('.')[0];
                         filePath = file_name + "." + "avi";
                     }
+                    else
+                    {
+                        string file_name = av_url_file_name.Split('.')[0];
+                        filePath = file_name + "." + content_type;
+                    }
 
 
                     byte[] bytes = Convert.FromBase64String(base64);

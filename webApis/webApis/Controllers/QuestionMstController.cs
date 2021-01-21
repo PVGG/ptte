@@ -24,6 +24,17 @@ namespace PTEWebService.Controllers
 
         }
 
+        // GET: api/questionmst/5/0
+        public string Get(int id, int flage)
+        {
+            Models.Question_Mst obj = new Models.Question_Mst();
+
+            string output = obj.GetQuestionByCategaryId(id);
+
+            return output;
+
+        }
+
         // GET: api/questionmst
         public string Get()
         {
@@ -68,15 +79,24 @@ namespace PTEWebService.Controllers
 
                 try
                 {
-                    string baseData = Convert.ToString(jsonArr.av_url);
+                    string baseData = Convert.ToString(jsonArr.avi_file_url);
                     string base64 = baseData.Split(',')[1];
                     string content_data = baseData.Split(',')[0];
                     string content_type_info = content_data.Split(';')[0];
                     string content_type = content_type_info.Split('/')[1];
-                    if (content_type.Equals("x-msvideo"))
+                    if (content_type.Equals("avi"))
                     {
                         filePath = file_name + "." + "avi";
                     }
+                    else if(content_type.Equals("mpeg"))
+                    {
+                        filePath = file_name + "." + "mp3";
+                    }
+                    else
+                    {
+                        filePath = file_name + "." + content_type;
+                    }
+
 
 
                     byte[] bytes = Convert.FromBase64String(base64);
@@ -154,10 +174,15 @@ namespace PTEWebService.Controllers
                     string content_data = baseData.Split(',')[0];
                     string content_type_info = content_data.Split(';')[0];
                     string content_type = content_type_info.Split('/')[1];
-                    if (content_type.Equals("x-msvideo"))
+                    if (content_type.Equals("avi"))
                     {
                         string file_name = av_url_file_name.Split('.')[0];
                         filePath = file_name + "." + "avi";
+                    }
+                    else
+                    {
+                        string file_name = av_url_file_name.Split('.')[0];
+                        filePath = file_name + "." + content_type;
                     }
 
 

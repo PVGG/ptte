@@ -40,18 +40,23 @@ namespace PTEWebService.Controllers
         {
             Models.Plan_Details obj = new Models.Plan_Details();
 
+            string output = "Fail to add plan details";
+
             dynamic jsonArrs = JArray.Parse(value_data);
+            var test = ((Newtonsoft.Json.Linq.JArray)jsonArrs).Count;
+            for (int iCount = 0; iCount < test; iCount++)
+            {
+                dynamic jsonArr = jsonArrs[iCount];
 
-            dynamic jsonArr = jsonArrs[0];
+                int plan_id = jsonArr.plan_id;
+                int value = jsonArr.value;
+                float price = jsonArr.price;
+                string notes = jsonArr.notes;
+                int user_id = jsonArr.user_id;
+                //JSONArray ja_data = json.getJSONArray("data");
 
-            int plan_id = jsonArr.plan_id;
-            int value = jsonArr.value;
-            float price = jsonArr.price;
-            string notes = jsonArr.notes;
-            int user_id = jsonArr.user_id;
-            //JSONArray ja_data = json.getJSONArray("data");
-
-            string output = obj.AddPlanDetails(plan_id,value,price,notes,user_id);
+                output = obj.AddPlanDetails(plan_id, value, price, notes, user_id);
+            }
             //return id.ToString();
             return output;
             //return value;
@@ -62,19 +67,26 @@ namespace PTEWebService.Controllers
         {
             Models.Plan_Details obj = new Models.Plan_Details();
 
+            string output = "Fail to update plan details";
+
             dynamic jsonArrs = JArray.Parse(value_data);
 
-            dynamic jsonArr = jsonArrs[0];
+            var test = ((Newtonsoft.Json.Linq.JArray)jsonArrs).Count;
+            for (int iCount = 0; iCount < test; iCount++)
+            {
 
-            int plan_id = jsonArr.plan_id;
-            int value = jsonArr.value;
-            float price = jsonArr.price;
-            string notes = jsonArr.notes;
-            int user_id = jsonArr.user_id;
-            //int index_id = jsonArr.index_id;
-            //JSONArray ja_data = json.getJSONArray("data");
+                dynamic jsonArr = jsonArrs[iCount];
 
-            string output = obj.EditPlanDetails(id, plan_id, value, price, notes, user_id);
+                int plan_id = jsonArr.plan_id;
+                int value = jsonArr.value;
+                float price = jsonArr.price;
+                string notes = jsonArr.notes;
+                int user_id = jsonArr.user_id;
+                //int index_id = jsonArr.index_id;
+                //JSONArray ja_data = json.getJSONArray("data");
+
+                output = obj.EditPlanDetails(id, plan_id, value, price, notes, user_id);
+            }
 
             return output;
         }

@@ -16,7 +16,8 @@ namespace PTEWebService.Models
 
         private SqlConnection con;
         private SqlCommand com;
-
+        private static readonly log4net.ILog log
+       = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private void connection()
         {
@@ -40,12 +41,15 @@ namespace PTEWebService.Models
                 CommonFunction obj = new CommonFunction();
                 string json_data = obj.DataTableToJSONWithStringBuilder(dt);
                 con.Close();
+                log.Info("Get All Module Sucessfully!!!");
+
                 return json_data;
 
             }
             catch (Exception ex)
             {
                 string error = ex.ToString();
+                log.Error(error);
                 return null;
             }
             finally
@@ -72,12 +76,14 @@ namespace PTEWebService.Models
                 CommonFunction obj = new CommonFunction();
                 string json_data = obj.DataTableToJSONWithStringBuilder(dt);
                 con.Close();
+                log.Info("Get All Module Sucessfully!!!");
                 return json_data;
 
             }
             catch (Exception ex)
             {
                 string error = ex.ToString();
+                log.Error(error);
                 return null;
             }
             finally
@@ -89,24 +95,35 @@ namespace PTEWebService.Models
         #region Insert Module
         public string AddModule(string name,int user_id)
         {
-            connection();
-            com = new SqlCommand("prManageModule_mst", con);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Action", "Insert");
-            com.Parameters.AddWithValue("@module_name", name);
-            com.Parameters.AddWithValue("@created_by", user_id);
-            com.Parameters.AddWithValue("@is_deleted", false);
-            con.Open();
-            int i = com.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                connection();
+                com = new SqlCommand("prManageModule_mst", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Action", "Insert");
+                com.Parameters.AddWithValue("@module_name", name);
+                com.Parameters.AddWithValue("@created_by", user_id);
+                com.Parameters.AddWithValue("@is_deleted", false);
+                con.Open();
+                int i = com.ExecuteNonQuery();
+                con.Close();
 
-            if (i >= 1)
-            {
-                return "Data Added Successfully";
+                if (i >= 1)
+                {
+                    log.Info("Data Added Sucessfully!!!");
+                    return "Data Added Successfully";
+                }
+                else
+                {
+                    log.Error("Data Not Added Sucessfully!!!");
+                    return "Data Not Added Successfully";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return "Data Not Added";
+                string error = ex.ToString();
+                log.Error(error);
+                return null;
             }
         }
         #endregion
@@ -124,12 +141,16 @@ namespace PTEWebService.Models
             con.Open();
             int i = com.ExecuteNonQuery();
             con.Close();
+            log.Info("Update All Module Sucessfully!!!");
+
             if (i >= 1)
             {
+                log.Info("Data Updated Sucessfully!!!");
                 return "Data Updated Successfully";
             }
             else
             {
+                log.Error("Data Not Updated Sucessfully!!!");
                 return "Data Not Updated";
             }
         }
@@ -137,22 +158,33 @@ namespace PTEWebService.Models
         #region Delete Modules
         public string DeleteModule(int index_id)
         {
-            connection();
-            com = new SqlCommand("prManageModule_mst", con);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Action", "Delete");
-            com.Parameters.AddWithValue("@index_id", index_id);
-            com.Parameters.AddWithValue("@is_deleted", true);
-            con.Open();
-            int i = com.ExecuteNonQuery();
-            con.Close();
-            if (i >= 1)
-            {
-                return "Data Deleted Successfully";
+            try { 
+                connection();
+                com = new SqlCommand("prManageModule_mst", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Action", "Delete");
+                com.Parameters.AddWithValue("@index_id", index_id);
+                com.Parameters.AddWithValue("@is_deleted", true);
+                con.Open();
+                int i = com.ExecuteNonQuery();
+                con.Close();
+                log.Info("Delete All Module Sucessfully!!!");
+                if (i >= 1)
+                {
+                    log.Info("Data Deleted Sucessfully!!!");
+                    return "Data Deleted Successfully";
+                }
+                else
+                {
+                    log.Error("Data Not Deleted Sucessfully!!!");
+                    return "Data Not Deleted";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return "Data Not Deleted";
+                string error = ex.ToString();
+                log.Error(error);
+                return null;
             }
         }
         #endregion

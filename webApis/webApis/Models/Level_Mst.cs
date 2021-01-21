@@ -61,7 +61,7 @@ namespace PTEWebService.Models
                 com = new SqlCommand("prManageLevel_mst", con);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@Action", "Select");
-                com.Parameters.AddWithValue("@index_id", user_id);
+                com.Parameters.AddWithValue("@index_id", id);
                 com.Parameters.AddWithValue("@is_deleted", false);
                 con.Open();
                 SqlDataAdapter ada = new SqlDataAdapter(com);
