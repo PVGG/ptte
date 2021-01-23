@@ -262,20 +262,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "http://localhost:50148/api/questionmst/"+ id,
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/questionmst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            question_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "http://localhost:50148/api/questionmst/"+ id,
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/questionmst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                question_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

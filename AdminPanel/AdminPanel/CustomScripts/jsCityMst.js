@@ -6,18 +6,28 @@
     city_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"country_id":"' + $("#cmboCountryList").val() + '","zone_id":"' + $("#cmboZoneList").val() + '","state_id":"' + $("#cmboStateList").val() + '","city_name":"' + $("#txtCityName").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/citymst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                city_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtCityName").val())) {
+
+            alert("Enter valid City name...!");
+
+        }
+        else {
+
+            var requestData = '[{"country_id":"' + $("#cmboCountryList").val() + '","zone_id":"' + $("#cmboZoneList").val() + '","state_id":"' + $("#cmboStateList").val() + '","city_name":"' + $("#txtCityName").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/citymst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    city_list();
+                }
+            });
+        }
     });
 
 
@@ -193,20 +203,22 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/statemst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/citymst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            city_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/statemst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/citymst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                city_list();
 
 
-        }
-    });
+            }
+        });
+    }
 
 }

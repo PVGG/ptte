@@ -3,18 +3,28 @@
     level_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"level_name":"' + $("#txtLevelName").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/levelmst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                level_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtLevelName").val())) {
+
+            alert("Enter valid Level Name...!");
+
+        }
+        else {
+
+            var requestData = '[{"level_name":"' + $("#txtLevelName").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/levelmst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    level_list();
+                }
+            });
+        }
     });
 
 
@@ -133,20 +143,22 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/levelmst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/levelmst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            level_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/levelmst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/levelmst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                level_list();
 
 
-        }
-    });
+            }
+        });
+    }
 
 }

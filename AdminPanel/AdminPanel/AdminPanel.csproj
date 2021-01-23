@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Area_Mst.html" />
+    <Content Include="Assign_Page_To_user.html" />
     <Content Include="City_Mst.html" />
     <Content Include="Company_Info_Mst.html" />
     <Content Include="Contact.aspx" />
@@ -181,6 +182,7 @@
     <Content Include="js\jquery.metisMenu.js" />
     <Content Include="js\jquery.mixitup.min.js" />
     <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\validate.js" />
     <Content Include="js\wizard\jquery.cookie-1.3.1.js" />
     <Content Include="js\wizard\jquery.steps.js" />
     <Content Include="js\wizard\modernizr-2.6.2.min.js" />

@@ -3,18 +3,28 @@
     exam_type_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"exam_type_name":"' + $("#txtExam_Type_Name").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/examtypemst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                exam_type_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtExam_Type_Name").val())) {
+
+            alert("Enter valid Exam Type Name...!");
+
+        }
+        else {
+
+            var requestData = '[{"exam_type_name":"' + $("#txtExam_Type_Name").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/examtypemst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    exam_type_list();
+                }
+            });
+        }
     });
 
 
@@ -133,20 +143,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/examtypemst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/examtypemst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            exam_type_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/examtypemst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/examtypemst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                exam_type_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

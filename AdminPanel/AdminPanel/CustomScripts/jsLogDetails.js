@@ -137,20 +137,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/logdetails/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/logdetails/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            log_detail_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/logdetails/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/logdetails/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                log_detail_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

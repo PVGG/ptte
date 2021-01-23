@@ -143,20 +143,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/questionmst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/multiplechoicequestion/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            multiple_choice_question_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/questionmst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/multiplechoicequestion/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                multiple_choice_question_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

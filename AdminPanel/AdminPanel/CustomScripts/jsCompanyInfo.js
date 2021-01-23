@@ -7,19 +7,35 @@
     company_info_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"company_name":"' + $("#txtCompany_Name").val() + '","company_address":"' + $("#txtCompany_Address").val() + '","company_pincode":"' + $("#txtCustomer_Pincode").val() + '","company_country_id":"' + $("#cmboCountryList").val() + '","company_state_id":"' + $("#cmboStateList").val() + '","company_city_id":"' + $("#cmboCityList").val() + '","company_area_id":"' + $("#cmboAreaList").val() + '","company_email":"' + $("#txtCompany_Email").val() + '","company_contact_person":"' + $("#txtCompany_Contact_Person").val() + '","company_contact_no":"' + $("#txtCompany_Contact_No").val() + '","company_fax_no":"' + $("#txtCompany_Fax_No").val() + '","company_pan_no":"' + $("#txtCompany_Pan_No").val() + '","company_registration_no":"' + $("#txtCompany_Registration_No").val() + '","company_gstin_no":"' + $("#txtCompany_GST_In").val() + '","company_logo":"' + $("#txtCompany_Logo").val() + '","company_bank_id":"' + $("#txtCompany_Bank_Id").val() + '","company_bank_branch_id":"' + $("#txtCompany_Bank_Branch_Id").val() + '","company_bank_ifsc":"' + $("#txtCompany_Branch_IFSC").val() + '","company_account_no":"' + $("#txtCompany_Account_No").val() + '","company_cin_no":"' + $("#txtCompany_CIN_No").val() + '","company_cst_no":"' + $("#txtCompany_CST_No").val() + '","user_id":"11"}]';
-       
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/companyinfo",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                company_info_list();
-            }
-        });
+
+        var comp_name = /^[a-zA-Z]+$/;
+        var comp_add = /^[a-zA-Z0-9]+$/;
+        var comp_em = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!comp_name.test($("#txtCompany_Name").val())) {
+            alert("Enter valid Company Name...!");
+        }
+        else if (!comp_add.test($("#txtCompany_Address").val())) {
+            alert("Enter valid Company Address...!");
+        }
+        else if (!comp_em.test($("#txtCompany_Email").val())) {
+            alert("Enter valid Company Email Address...!");
+        }
+        else {
+
+            var requestData = '[{"company_name":"' + $("#txtCompany_Name").val() + '","company_address":"' + $("#txtCompany_Address").val() + '","company_pincode":"' + $("#txtCustomer_Pincode").val() + '","company_country_id":"' + $("#cmboCountryList").val() + '","company_state_id":"' + $("#cmboStateList").val() + '","company_city_id":"' + $("#cmboCityList").val() + '","company_area_id":"' + $("#cmboAreaList").val() + '","company_email":"' + $("#txtCompany_Email").val() + '","company_contact_person":"' + $("#txtCompany_Contact_Person").val() + '","company_contact_no":"' + $("#txtCompany_Contact_No").val() + '","company_fax_no":"' + $("#txtCompany_Fax_No").val() + '","company_pan_no":"' + $("#txtCompany_Pan_No").val() + '","company_registration_no":"' + $("#txtCompany_Registration_No").val() + '","company_gstin_no":"' + $("#txtCompany_GST_In").val() + '","company_logo":"' + $("#txtCompany_Logo").val() + '","company_bank_id":"' + $("#txtCompany_Bank_Id").val() + '","company_bank_branch_id":"' + $("#txtCompany_Bank_Branch_Id").val() + '","company_bank_ifsc":"' + $("#txtCompany_Branch_IFSC").val() + '","company_account_no":"' + $("#txtCompany_Account_No").val() + '","company_cin_no":"' + $("#txtCompany_CIN_No").val() + '","company_cst_no":"' + $("#txtCompany_CST_No").val() + '","user_id":"11"}]';
+
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/companyinfo",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    company_info_list();
+                }
+            });
+        }
     });
 
 
@@ -235,20 +251,22 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/companyinfo/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/companyinfo/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            company_info_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/companyinfo/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/companyinfo/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                company_info_list();
 
 
-        }
-    });
+            }
+        });
+    }
 
 }

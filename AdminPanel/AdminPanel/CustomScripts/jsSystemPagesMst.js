@@ -3,18 +3,32 @@
     system_pages_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"pages_name":"' + $("#txtPages_Name").val() + '","pages_url":"' + $("#txtPages_Url").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/systempagesmst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                system_pages_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        var ur = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?/;
+        if (!re.test($("#txtPages_Name").val())) {
+
+            alert("Enter valid Pages name...!");
+
+        }
+        else if (!ur.test($("#txtPages_Url").val())) {
+            alert("Enter valid Page Url...!");
+        }
+        else {
+
+            var requestData = '[{"pages_name":"' + $("#txtPages_Name").val() + '","pages_url":"' + $("#txtPages_Url").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/systempagesmst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    system_pages_list();
+                }
+            });
+        }
     });
 
 
@@ -79,19 +93,19 @@ function system_pages_list() {
             tbl += "<tr><th>Id</th><th>Pages Name</th><th>Page URL</th><th>Delete</th><th>Update</th></tr>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 tbl += "<tr>";
-                tbl += "<td width='10%'>";
+                tbl += "<td>";
                 tbl += iCount + 1;
                 tbl += "</td>";
-                tbl += "<td width='20%'>";
+                tbl += "<td>";
                 tbl += jsonData[iCount].pages_name;
                 tbl += "</td>";
-                tbl += "<td width='20%'>";
+                tbl += "<td>";
                 tbl += jsonData[iCount].pages_url;
                 tbl += "</td>";
-                tbl += "<td width='25%'>";
+                tbl += "<td>";
                 tbl += "<i type='button' class='fa fa-trash btn-danger'  onclick='del(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
-                tbl += "<td width='25%'>";
+                tbl += "<td>";
                 tbl += "<i type='button' class='fa fa-edit btn-warning' onclick='update(" + jsonData[iCount].index_id + ")'></i>";
                 tbl += "</td>";
                 tbl += "</tr>";
@@ -136,20 +150,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/systempagesmst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/systempagesmst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            system_pages_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/systempagesmst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/systempagesmst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                system_pages_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

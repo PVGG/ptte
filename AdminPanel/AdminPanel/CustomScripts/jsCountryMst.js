@@ -1,21 +1,34 @@
 ﻿$(document).ready(function () {
     //alert("Hello");
     country_list();
+    
 
-    $("#btnSave").click(function () {
-        var requestData = '[{"country_name":"' + $("#txtCountryName").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/countrymst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                country_list();
+    
+        $("#btnSave").click(function () {
+
+            var re = /^[a-zA-Z]+$/;
+            if (!re.test($("#txtCountryName").val())) {
+
+                alert("Enter valid Country name...!");
+
+            }
+            else {
+
+                var requestData = '[{"country_name":"' + $("#txtCountryName").val() + '","user_id":"11"}]';
+                $.ajax({
+                    type: "POST",
+                    url: "https://trial.spyderxindia.com/api/countrymst",
+                    data: JSON.stringify(requestData),
+                    contentType: "application/json",
+                    //datatype: "json",
+                    success: function (responseFromServer) {
+                        alert(responseFromServer);
+                        country_list();
+                    }
+                });
+
             }
         });
-    });
 
 
 
@@ -35,8 +48,6 @@
             }
         });
     });
-
-
 
 });
 
@@ -133,20 +144,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/countrymst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/countrymst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            country_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/countrymst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/countrymst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                country_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

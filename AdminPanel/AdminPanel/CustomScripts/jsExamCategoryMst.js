@@ -3,18 +3,28 @@
     exam_category_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"exam_category_name":"' + $("#txtExam_Category_Name").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/examcategarymst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                exam_category_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtExam_Category_Name").val())) {
+
+            alert("Enter valid Exam Category Name...!");
+
+        }
+        else {
+
+            var requestData = '[{"exam_category_name":"' + $("#txtExam_Category_Name").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/examcategarymst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    exam_category_list();
+                }
+            });
+        }
     });
 
 
@@ -133,20 +143,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/examcategarymst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/examcategarymst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            exam_category_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/examcategarymst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/examcategarymst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                exam_category_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }
