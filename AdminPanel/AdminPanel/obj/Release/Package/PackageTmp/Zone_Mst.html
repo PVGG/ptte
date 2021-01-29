@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PTTE</title>
+    <title>PTTE | Zone Master</title>
 
     <!-- BOOTSTRAP STYLES-->
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">COMPANY NAME</a>
+                <a class="navbar-brand" href="index.html">My PTE Classes</a>
             </div>
 
             <div class="header-right">
@@ -174,45 +174,33 @@
                 <!-- /. ROW  -->
                 <div class="row">
                     <div class="col-md-12 col-sm-6 col-xs-12">
-                        <div class="panel panel-primary">
-
-                            
-                                        <div class="panel-heading text-center">
-                                            Zone Master
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="form-group">
-                                                <label>Id</label>
-                                                <input class="form-control" type="text" id="txtZoneId">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Country Name</label>
-                                                <select class="form-control" id="cmboCountryList"></select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Zone Name</label>
-                                                <input class="form-control" type="text" id="txtZoneName">
-                                                <p class="help-block">Help text here.</p>
-                                            </div>
-                                            <div class="form-group text-center">
-                                                <button type="button" class="btn btn-success" id="btnSave">Save </button>
-                                                <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    </div>
-
+                        <div class="panel panel-primary">                         
+                            <div class="panel-heading text-center">
+                                Zone Master
                             </div>
-
-                            <div id="lstZoneList"></div>
+                            <div class="panel-body">
+                                <input type="hidden" id="txtZoneId">
+                                
+                                <div class="form-group">
+                                    <label>Country Name</label>
+                                    <select class="form-control" id="cmboCountryList"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label> Zone Name</label>
+                                    <input class="form-control" type="text" id="txtZoneName">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-success" id="btnSave">Save </button>
+                                    <button type="button" class="btn btn-warning" id="btnUpdate">Update </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="lstZoneList"></div>
             </div>
-        </div><!-- /. WRAPPER  -->
+        </div>       
+    </div><!-- /. WRAPPER  -->
         <!--<div id="footer-sec">
         &copy; 2021 Your Company | Design By : <a href="#" target="_blank">Company Name</a>
     </div>-->

@@ -3,18 +3,28 @@
     plan_type_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"plan_type_name":"' + $("#txtPlan_Type_Name").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/plantypemst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                plan_type_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtPlan_Type_Name").val())) {
+
+            alert("Enter valid Plan Type Name...!");
+
+        }
+        else {
+
+            var requestData = '[{"plan_type_name":"' + $("#txtPlan_Type_Name").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/plantypemst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    plan_type_list();
+                }
+            });
+        }
     });
 
 
@@ -113,9 +123,9 @@ function update(id) {
         contentType: "application/json",
         //datatype: "json",
         success: function (responseFromServer) {
-            alert(responseFromServer);
+           // alert(responseFromServer);
             var jsonData = eval('(' + responseFromServer + ')');
-            alert(jsonData[0].index_id);
+           // alert(jsonData[0].index_id);
             var tbl = "<table>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 $("#txtPlan_Type_Id").val(jsonData[0].index_id);
@@ -133,20 +143,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/plantypemst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/plantypemst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-            plan_type_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/plantypemst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/plantypemst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                plan_type_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

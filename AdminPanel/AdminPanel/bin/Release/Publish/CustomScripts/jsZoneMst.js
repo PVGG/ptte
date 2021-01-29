@@ -4,18 +4,28 @@
     zone_list();
 
     $("#btnSave").click(function () {
-        var requestData = '[{"country_id":"' + $("#cmboCountryList").val() + '","zone_name":"' + $("#txtZoneName").val() + '","user_id":"11"}]';
-        $.ajax({
-            type: "POST",
-            url: "https://trial.spyderxindia.com/api/zonemst",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            //datatype: "json",
-            success: function (responseFromServer) {
-                alert(responseFromServer);
-                zone_list();
-            }
-        });
+
+        var re = /^[a-zA-Z]+$/;
+        if (!re.test($("#txtZoneName").val())) {
+
+            alert("Enter valid Zone name...!");
+
+        }
+        else {
+
+            var requestData = '[{"country_id":"' + $("#cmboCountryList").val() + '","zone_name":"' + $("#txtZoneName").val() + '","user_id":"11"}]';
+            $.ajax({
+                type: "POST",
+                url: "https://trial.spyderxindia.com/api/zonemst",
+                data: JSON.stringify(requestData),
+                contentType: "application/json",
+                //datatype: "json",
+                success: function (responseFromServer) {
+                    alert(responseFromServer);
+                    zone_list();
+                }
+            });
+        }
     });
 
 
@@ -124,9 +134,9 @@ function update(id) {
         contentType: "application/json",
         //datatype: "json",
         success: function (responseFromServer) {
-            alert(responseFromServer);
+            //alert(responseFromServer);
             var jsonData = eval('(' + responseFromServer + ')');
-            alert(jsonData[0].index_id);
+            //alert(jsonData[0].index_id);
             //var tbl = "<table>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 $("#txtZoneId").val(jsonData[0].index_id);
@@ -144,20 +154,21 @@ function update(id) {
 
 
 function del(id) {
-    $.ajax({
-        //url: "https://trial.spyderxindia.com/api/countrymst/3",
-        type: "DELETE",
-        //crossOrigin: true,
-        url: "https://trial.spyderxindia.com/api/zonemst/" + id,
-        //data: JSON.stringify(num),
-        contentType: "application/json",
-        //datatype: "json",
-        success: function (responseFromServer) {
-            alert(responseFromServer);
-           zone_list();
+    if (confirm('Are you sure ?')) {
+        $.ajax({
+            //url: "https://trial.spyderxindia.com/api/countrymst/3",
+            type: "DELETE",
+            //crossOrigin: true,
+            url: "https://trial.spyderxindia.com/api/zonemst/" + id,
+            //data: JSON.stringify(num),
+            contentType: "application/json",
+            //datatype: "json",
+            success: function (responseFromServer) {
+                alert(responseFromServer);
+                zone_list();
 
 
-        }
-    });
-
+            }
+        });
+    }
 }

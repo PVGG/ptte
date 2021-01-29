@@ -124,9 +124,9 @@ function update(id) {
         contentType: "application/json",
         //datatype: "json",
         success: function (responseFromServer) {
-            alert(responseFromServer);
+            //alert(responseFromServer);
             var jsonData = eval('(' + responseFromServer + ')');
-            alert(jsonData[0].index_id);
+            //alert(jsonData[0].index_id);
             var tbl = "<table>";
             for (var iCount = 0; iCount < jsonData.length; iCount++) {
                 $("#txtCountryId").val(jsonData[0].index_id);
